@@ -1,0 +1,2 @@
+# MyMiner
+MyMiner Application
