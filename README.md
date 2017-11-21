@@ -23,7 +23,7 @@ Release Alpha 004 -
 * Created welcome mesage for first timers
 * Plently of other fixes
 
-* Outstanding Issues *
+*** Outstanding Issues
 * Still need to get working on the overclocking
 * Add more coins 
 * Add more coins
