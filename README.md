@@ -1,5 +1,5 @@
 # All In One Miner
-AIO Miner Application
+AIO Miner Application (Mining Manager)
 
 This application is to help people mine coins with your windows computer.  You will add your own pools and mine coins to your wallet.
 This application will help you keep the application running or mine while your computer is idle.  It's made to be free. This application
@@ -14,7 +14,7 @@ You are better than batch files...you know it..I know it
 Release Alpha 005 - November 29th 2017
 * Change the name of the project to AIOMiner (All In One Miner)
 * Added Multiple Coins (ZenCash,Komodo,Mona,Hush)
-* Updated CCMiner to versionb 2.2.2
+* Updated CCMiner to version 2.2.2
 * Added a Backup/Import for settings
 * All MH/s show up inside of the application for EWBF and CCMiner
 * You can now change the currency of the price the coins are being displayed in
