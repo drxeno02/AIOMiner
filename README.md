@@ -11,6 +11,11 @@ When this goes to beta it will be released for Open Source.  Until then i'm keep
 
 You are better than batch files...you know it..I know it
 
+Release Alpha 005.HP1 - November 30th 2017
+* Download this after Alpha 005, fixed an issue where if you hit stop it would close AIOminer.exe
+* This will replace the .exe 
+* Note: Windows Features were added but not setup yet in this HP
+
 Release Alpha 005 - November 29th 2017
 * Change the name of the project to AIOMiner (All In One Miner)
 * Added Multiple Coins (ZenCash,Komodo,Mona,Hush)
