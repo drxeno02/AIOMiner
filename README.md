@@ -1,5 +1,5 @@
-# MyMiner
-MyMiner Application
+# All In One Miner
+AIO Miner Application
 
 This application is to help people mine coins with your windows computer.  You will add your own pools and mine coins to your wallet.
 This application will help you keep the application running or mine while your computer is idle.  It's made to be free. This application
@@ -11,7 +11,18 @@ When this goes to beta it will be released for Open Source.  Until then i'm keep
 
 You are better than batch files...you know it..I know it
 
-
+Release Alpha 005 - November 29th 2017
+* Change the name of the project to AIOMiner (All In One Miner)
+* Added Multiple Coins (ZenCash,Komodo,Mona,Hush)
+* Updated CCMiner to versionb 2.2.2
+* Added a Backup/Import for settings
+* All MH/s show up inside of the application for EWBF and CCMiner
+* You can now change the currency of the price the coins are being displayed in
+* Added E-Mail settings to show you how to SMS
+* Allowed you to edit the Idle settings (You pick your own countdown)
+* Enabled a Scheudle Setting (You can set a daily coin you want to mine, changes at Midnight)
+* Improved the monitoring of your mining
+* Fixed a few issues where you couldn't set the pool to be your main pool
 
 Release Alpha 004 -
 * Implemented coutdown of idle mining on the start button 
@@ -28,10 +39,10 @@ Release Alpha 004 -
 * Add more coins 
 * Add more coins
 * Add more coins
-* Find a way to use the CCMiner API to get the MHs
 * Get an AMD card in house so you can support AMD people
 
 
 
 Discord: https://discord.gg/vfj4m7F
+WebSite: AIOMiner.com (Pending...)
 Email: Cisco.bobbyr@gmail.com
