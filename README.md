@@ -1,53 +1,57 @@
 # All In One Miner
-AIO Miner Application (Mining Manager)
 
-This application is to help people mine coins with your windows computer.  You will add your own pools and mine coins to your wallet.
-This application will help you keep the application running or mine while your computer is idle.  It's made to be free. This application
-will never cost money.  I will never ask for a penny.  I will never ask for a fee.  You worked hard, and I was going to make this for 
-myself regardless.  I'm just sharing.  Please join us on the discord channel to help me test!
-
-When this goes to beta it will be released for Open Source.  Until then i'm keeping my crappy code to myself!
-(It's bad, but it works)
-
-You are better than batch files...you know it..I know it
-
-Release Alpha 005.HP1 - November 30th 2017
-* Download this after Alpha 005, fixed an issue where if you hit stop it would close AIOminer.exe
-* This will replace the .exe 
-* Note: Windows Features were added but not setup yet in this HP
-
-Release Alpha 005 - November 29th 2017
-* Change the name of the project to AIOMiner (All In One Miner)
-* Added Multiple Coins (ZenCash,Komodo,Mona,Hush)
-* Updated CCMiner to version 2.2.2
-* Added a Backup/Import for settings
-* All MH/s show up inside of the application for EWBF and CCMiner
-* You can now change the currency of the price the coins are being displayed in
-* Added E-Mail settings to show you how to SMS
-* Allowed you to edit the Idle settings (You pick your own countdown)
-* Enabled a Scheudle Setting (You can set a daily coin you want to mine, changes at Midnight)
-* Improved the monitoring of your mining
-* Fixed a few issues where you couldn't set the pool to be your main pool
-
-Release Alpha 004 -
-* Implemented coutdown of idle mining on the start button 
-* Improved idle mining
-* Improved Monitoring for EWBF
-* Implemented MH reporting for EWBF coins
-* Implemented a new ICON for the project
-* Moved around menu items
-* Created welcome mesage for first timers
-* Plently of other fixes
-
-*** Outstanding Issues
-* Still need to get working on the overclocking
-* Add more coins 
-* Add more coins
-* Add more coins
-* Get an AMD card in house so you can support AMD people
+AIOMiner project was put together to help desktop owners and rig owners alike to mine alt coins with one application.  No longer will you
+need to operate with batch files.  You now have one application to help you make more coins.  Currently only Nvidia is supported
 
 
+## Features Currently Avaiable
+ - Pool Management
+ - Auto start mining on start of application
+ - Following a schedule of coins you want to mine throughout the week
+ - E-Mail alerting
+ - Idle Mining
+ - Prices right on the front of the application of all supported coins updated every 5 minutes
+ - Display of current MH/s on the front of the application
+ - Display of current GPU Power useage on the front of the application
+ - Enable Auto-Login for your windows machine
+ - Enable AIOMiner to start as soon as you boot 
+ - Enable/Disable Windows Updates
+ - Backup/Import settings
+ - Change your coin prices to multiple curranceys
+ - Review individual card performance
+ - Monitor you mining and restart on errors
+ - Rebooting of your machine if you experience multiple failures of mining
 
-Discord: https://discord.gg/vfj4m7F
-WebSite: AIOMiner.com (Pending...)
-Email: Cisco.bobbyr@gmail.com
+## Getting Started
+
+Download AIOMiner_Alpha_*** release and any HP's that come with it.  Start the application and setup the pools that you already know and love and 
+click start. 
+
+Current Coin Supported
+- ZCash  
+- Vertcoin
+- Mona
+- Komodo
+- Hush
+- ZenCash
+
+Recommended Pools
+
+FlyPool (ZCash)
+vert.scubasteve.org:9171 (Vertcoin)
+mona.suprnova.cc (Mona)
+miningpools.cloud (Komodo)
+miningpools.cloud (Hush)
+zen.suprnova.cc (ZenCash)
+
+### Prerequisites
+
+Installing will give you every thing you need.  
+You should look at getting the latest Nvidia drivers from Nvidia.com
+
+
+## Built With
+
+* [CCMiner 2.2.2](https://github.com/tpruvot/ccminer/releases)
+* [EWBF V0.3.4b](https://github.com/nanopool/ewbf-miner/releases)
+* [Visual Studio 2017](https://rometools.github.io/rome/) - Used to generate RSS Feeds
