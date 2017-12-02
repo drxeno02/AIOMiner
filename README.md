@@ -54,4 +54,4 @@ You should look at getting the latest Nvidia drivers from Nvidia.com
 
 * [CCMiner 2.2.2](https://github.com/tpruvot/ccminer/releases)
 * [EWBF V0.3.4b](https://github.com/nanopool/ewbf-miner/releases)
-* [Visual Studio 2017](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Visual Studio 2017]
