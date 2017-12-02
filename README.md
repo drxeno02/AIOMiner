@@ -24,7 +24,7 @@ need to operate with batch files.  You now have one application to help you make
 
 ## Getting Started
 
-Download AIOMiner_Alpha_*** release and any HP's that come with it.  Start the application and setup the pools that you already know and love and 
+Download AIOMiner_Alpha_*** (https://github.com/BobbyGR/AIOMiner/releases) release and any HP's that come with it.  Start the application and setup the pools that you already know and love and 
 click start. 
 
 Current Coin Supported
