@@ -21,6 +21,9 @@ need to operate with batch files.  You now have one application to help you make
  - Review individual card performance
  - Monitor you mining and restart on errors
  - Rebooting of your machine if you experience multiple failures of mining
+ - Test all pools before you add them
+ - Unlimited pool support
+ - JSON based pool list that can easily be shared between miners (or pools to recommend a download)
 
 ## Getting Started
 
