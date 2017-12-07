@@ -37,15 +37,20 @@ Current Coin Supported
 - Komodo
 - Hush
 - ZenCash
+- BitcoinZ
+- STAKS
+- Ethereum 
 
 Recommended Pools
 
-FlyPool (ZCash)
-vert.scubasteve.org:9171 (Vertcoin)
-mona.suprnova.cc (Mona)
-miningpools.cloud (Komodo)
-miningpools.cloud (Hush)
-zen.suprnova.cc (ZenCash)
+- FlyPool (ZCash)
+- vert.scubasteve.org:9171 (Vertcoin)
+- mona.suprnova.cc (Mona)
+- miningpools.cloud (Komodo)
+- miningpools.cloud (Hush)
+- zen.suprnova.cc (ZenCash)
+- PCMining.XYZ (BitCoinZ)
+- staks.suprnova.cc (Staks)
 
 ### Prerequisites
 
@@ -57,4 +62,5 @@ You should look at getting the latest Nvidia drivers from Nvidia.com
 
 * [CCMiner 2.2.2](https://github.com/tpruvot/ccminer/releases)
 * [EWBF V0.3.4b](https://github.com/nanopool/ewbf-miner/releases)
+* [ethminer]
 * [Visual Studio 2017]
