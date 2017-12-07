@@ -38,7 +38,7 @@ Current Coin Supported
 - Hush
 - ZenCash
 - BitcoinZ
-- STAKS
+- STRAKS
 - Ethereum 
 
 Recommended Pools
