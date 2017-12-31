@@ -8,7 +8,7 @@ need to operate with batch files.  You now have one application to help you make
  - Pool Management
  - Auto start mining on start of application
  - Following a schedule of coins you want to mine throughout the week
- - E-Mail alerting
+ - E-Mail alerting ***Test first***
  - Idle Mining
  - Prices right on the front of the application of all supported coins updated every 5 minutes
  - Display of current MH/s on the front of the application
@@ -24,6 +24,11 @@ need to operate with batch files.  You now have one application to help you make
  - Test all pools before you add them
  - Unlimited pool support
  - JSON based pool list that can easily be shared between miners (or pools to recommend a download)
+ - AMD/NVIDIA Supported
+ - Adjust if you want to reboot and after how long
+ - Now you can put in advanced settings if mine are not ideal
+ - Added the ability to add new coins quickly so you don't need to re-install
+ - Added a quick mine ability in the help section
 
 ## Getting Started
 
@@ -40,27 +45,40 @@ Current Coin Supported
 - BitcoinZ
 - STRAKS
 - Ethereum 
+- Trezarcoin
+- Verge
+- Vivo
+- Bitcoin Gold
+- Zclassic
+- Ellaism
+- Pirl
+- Musicoin
+- Feathercoin
+- Monero
+- Ubiq
+- Expanse
+- Orbitcoin
+- Metaverse
+- EthereumClassic
+- Sumokoin
+- Karbo
+- Electroneum
+- Bytecoin
+- Halcyon
 
-Recommended Pools
-
-- FlyPool (ZCash)
-- vert.scubasteve.org:9171 (Vertcoin)
-- mona.suprnova.cc (Mona)
-- miningpools.cloud (Komodo)
-- miningpools.cloud (Hush)
-- zen.suprnova.cc (ZenCash)
-- PCMining.XYZ (BitCoinZ)
-- staks.suprnova.cc (Staks)
 
 ### Prerequisites
 
 Installing will give you every thing you need.  
-You should look at getting the latest Nvidia drivers from Nvidia.com
+You should look at getting the latest Nvidia/Amd drivers
 
 
 ## Built With
 
-* [CCMiner 2.2.2](https://github.com/tpruvot/ccminer/releases)
-* [EWBF V0.3.4b](https://github.com/nanopool/ewbf-miner/releases)
-* [ethminer]
+* [CCMiner 2.2.3]
+* [EWBF V0.3.4b]
+* [NsGpuCNMiner]
+* [ZecMiner64]
+* [EthDcrMiner64]
+* [nsgminer]
 * [Visual Studio 2017]
