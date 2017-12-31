@@ -1,6 +1,6 @@
 # All In One Miner
 
-Quick Download: AIOMiner.com
+Quick Download: (http://AIOMiner.com)
 
 AIOMiner project was put together to help desktop owners and rig owners alike to mine alt coins with one application.  No longer will you
 need to operate with batch files.  You now have one application to help you make more coins.  Currently only Nvidia is supported
