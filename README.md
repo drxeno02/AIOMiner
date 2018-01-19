@@ -1,5 +1,9 @@
-# All In One Miner
 
+<p align="center">
+  <img src="http://aiominer.com/images/logo1-transparent.png">
+</p>
+
+# All In One Miner
 Quick Download: (http://AIOMiner.com)
 
 NVIDIA AND AMD SUPPORTED
