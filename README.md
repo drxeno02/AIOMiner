@@ -2,8 +2,13 @@
 
 Quick Download: (http://AIOMiner.com)
 
-AIOMiner project was put together to help desktop owners and rig owners alike to mine alt coins with one application.  No longer will you
-need to operate with batch files.  You now have one application to help you make more coins.  Currently only Nvidia is supported
+NVIDIA AND AMD SUPPORTED
+No Fees
+Community Driven
+No batch files :)
+
+AIOMiner project was put together to help desktop owners and rig owners alike to mine alt coins with one application.  No longer will you need to operate with batch files.  You now have one application to help you make more coins. 
+
 
 
 ## Features Currently Avaiable
@@ -77,7 +82,7 @@ You should look at getting the latest Nvidia/Amd drivers
 
 ## Built With
 
-* [CCMiner 2.2.3]
+* [CCMiner 2.2.4]
 * [EWBF V0.3.4b]
 * [NsGpuCNMiner]
 * [ZecMiner64]
