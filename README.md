@@ -2,9 +2,12 @@
 <p align="center">
   <img src="http://aiominer.com/images/logo1-transparent.png">
 </p>
+<p align="center">
+  <img src="http://aiominer.com/img/logo/dot1.png">
+</p>
 
 # All In One Miner
-Quick Download: (http://AIOMiner.com)
+Quick Download: (https://AIOMiner.com)
 
 NVIDIA AND AMD SUPPORTED
 No Fees
@@ -16,17 +19,21 @@ AIOMiner project was put together to help desktop owners and rig owners alike to
 
 
 ## Features Currently Avaiable
+ - No Fees from AIOMiner
+ - AMD/NVIDIA Supported
  - Pool Management
+ - 40 + Algorithums supported
+ - Add your own coin
+ - Automatic Updates for AIO and Miners/Proccesses
+ - WhatToMine.com Auto Profit Switching 
  - Auto start mining on start of application
  - Following a schedule of coins you want to mine throughout the week
- - E-Mail alerting ***Test first***
  - Idle Mining
- - Prices right on the front of the application of all supported coins updated every 5 minutes
- - Display of current MH/s on the front of the application
- - Display of current GPU Power useage on the front of the application
+ - Price Maruqee
+ - Display of current Speed on the front of the application
+ - Display of current GPU Power useage on the front of the application (AMD is an estimate at this time)
  - Enable Auto-Login for your windows machine
  - Enable AIOMiner to start as soon as you boot 
- - Enable/Disable Windows Updates
  - Backup/Import settings
  - Change your coin prices to multiple curranceys
  - Review individual card performance
@@ -35,7 +42,6 @@ AIOMiner project was put together to help desktop owners and rig owners alike to
  - Test all pools before you add them
  - Unlimited pool support
  - JSON based pool list that can easily be shared between miners (or pools to recommend a download)
- - AMD/NVIDIA Supported
  - Adjust if you want to reboot and after how long
  - Now you can put in advanced settings if mine are not ideal
  - Added the ability to add new coins quickly so you don't need to re-install
@@ -43,53 +49,30 @@ AIOMiner project was put together to help desktop owners and rig owners alike to
 
 ## Getting Started
 
-Download AIOMiner_Alpha_*** (https://github.com/BobbyGR/AIOMiner/releases) release and any HP's that come with it.  Start the application and setup the pools that you already know and love and 
-click start. 
+Download AIOMiner_Alpha_*** (https://github.com/BobbyGR/AIOMiner/releases)
+https://www.youtube.com/watch?v=C418vi-XHaA
 
-Current Coin Supported
-- ZCash  
-- Vertcoin
-- Mona
-- Komodo
-- Hush
-- ZenCash
-- BitcoinZ
-- STRAKS
-- Ethereum 
-- Trezarcoin
-- Verge
-- Vivo
-- Bitcoin Gold
-- Zclassic
-- Ellaism
-- Pirl
-- Musicoin
-- Feathercoin
-- Monero
-- Ubiq
-- Expanse
-- Orbitcoin
-- Metaverse
-- EthereumClassic
-- Sumokoin
-- Karbo
-- Electroneum
-- Bytecoin
-- Halcyon
+
+Current Coins Supported
+
+All of them, pretty much
 
 
 ### Prerequisites
 
 Installing will give you every thing you need.  
 You should look at getting the latest Nvidia/Amd drivers
-
+Installer now installs c++ runtimes that are needed
 
 ## Built With
 
-* [CCMiner 2.2.4]
+* [CCMiner 2.2.4, And like projects]
 * [EWBF V0.3.4b]
+* [DSTM]
+* [Phoenix Miner]
 * [NsGpuCNMiner]
 * [ZecMiner64]
 * [EthDcrMiner64]
 * [nsgminer]
+* [SGMiner, And like projects]
 * [Visual Studio 2017]
