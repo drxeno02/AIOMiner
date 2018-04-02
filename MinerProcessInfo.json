@@ -1,6 +1,20 @@
 {
   "Process": [
     {
+      "Algo": "x16s",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "nevermore",
+          "PATH": "~\\Miners\\NVIDIA\\nevermoreX16s\\nevermore-x16s-win64\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -d _gputouse -a x16s -i 19"
+        }
+      ]
+    },
+    {
       "Algo": "allium",
       "Info": [
         {
@@ -15,6 +29,20 @@
       ]
     },
     {
+      "Algo": "zero",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "optiminer",
+          "PATH": "~\\Miners\\NVIDIA\\optiminer\\optiminer-zero-win\\",
+          "EXECUTABLE": "Optiminer.exe",
+          "PREFERED": "1",
+          "API": "NA",
+          "ARGS": "-s _ip:_port -u _worker -p _pass -m 8080"
+        }
+      ]
+    },
+    {
       "Algo": "x16r",
       "Info": [
         {
@@ -24,7 +52,7 @@
           "EXECUTABLE": "ccminer.exe",
           "PREFERED": "1",
           "API": "ccminer",
-          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a x16r"
+          "ARGS": "-o _ip:_port -u _worker -p _pass -N 300 -d _gputouse -a x16r -i 19"
         },
         {
           "GPUx": "NVIDIA",
@@ -88,10 +116,19 @@
       "Info": [
         {
           "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis_keccak",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis_keccak\\ccminer_alexis_keccak\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass --lookup-gap 2 -d _gputouse -a c11"
+        },
+        {
+          "GPUx": "NVIDIA",
           "MINER": "ccminer_alexis",
           "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
           "EXECUTABLE": "ccminer.exe",
-          "PREFERED": "1",
+          "PREFERED": " ",
           "API": "ccminer",
           "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a c11"
         }
@@ -925,25 +962,25 @@
         {
           "GPUx": "NVIDIA",
           "MINER": "nvidia-ethdcrminer64",
-          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak AMD+NVIDIA GPU Miner v11.5\\",
+          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak AMD+NVIDIA GPU Miner v11.6\\",
           "EXECUTABLE": "EthDcrMiner64.exe",
           "PREFERED": "1",
           "API": "claymore",
-          "ARGS": "-epool _ip:_port -ewal _worker -epsw _pass -allpools 1 -wd 1 -di _gputouse"
+          "ARGS": "-epool _ip:_port -ewal _worker -epsw _pass -allpools 1 -allcoins 1 -wd 1 -di _gputouse"
         },
         {
           "GPUx": "AMD",
           "MINER": "amd-ethdcrminer64",
-          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak AMD+NVIDIA GPU Miner v11.5\\",
+          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak AMD+NVIDIA GPU Miner v11.6\\",
           "EXECUTABLE": "EthDcrMiner64.exe",
           "PREFERED": "1",
           "API": "claymore",
-          "ARGS": "-epool _ip:_port -ewal _worker -epsw _pass -allpools 1 -wd 1 -di _gputouse"
+          "ARGS": "-epool _ip:_port -ewal _worker -epsw _pass -allpools 1 -allcoins 1 -wd 1 -di _gputouse"
         },
         {
           "GPUx": "NVIDIA",
           "MINER": "nvidia-phoenix",
-          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_2.5d\\",
+          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_2.8c\\",
           "EXECUTABLE": "PhoenixMiner.exe",
           "PREFERED": " ",
           "API": "phoenix",
@@ -952,7 +989,7 @@
         {
           "GPUx": "AMD",
           "MINER": "amd-phoenix",
-          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_2.5d\\",
+          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_2.8c\\",
           "EXECUTABLE": "PhoenixMiner.exe",
           "PREFERED": " ",
           "API": "phoenix",
@@ -986,16 +1023,16 @@
           "MINER": "nsgminer",
           "PATH": "~\\Miners\\AMD\\nsgminer\\",
           "EXECUTABLE": "nsgminer.exe",
-          "PREFERED": "1",
+          "PREFERED": " ",
           "API": "sgminer",
           "ARGS": "-D --neoscrypt -o _ip:_port -u _worker -p _pass -I 15 --worksize 16 --api-listen --api-allow W:127.0.0.1 --gpu-platform 1"
         },
         {
           "GPUx": "AMD",
           "MINER": "clayneo",
-          "PATH": "~\\Miners\\AMD\\clayneo\\Claymore's NeoScrypt AMD GPU Miner v1.0\\",
+          "PATH": "~\\Miners\\AMD\\clayneo\\Claymore's NeoScrypt AMD GPU Miner v1.2\\",
           "EXECUTABLE": "NeoScryptMiner.exe",
-          "PREFERED": " ",
+          "PREFERED": "1",
           "API": "claymore",
           "ARGS": "-r -1 -pool _ip:_port  -wal _worker -psw _pass -a 1"
         }
