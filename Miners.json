@@ -1,6 +1,12 @@
 {
   "miners": [
     {
+      "NAME": "ccminer_alexis_keccak",
+      "WEBLOCATION": "http://cryptomining-blog.com/wp-content/download/ccminer_alexis_keccak.zip",
+      "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis_keccak\\",
+      "VER": "1.0"
+    },
+    {
       "NAME": "ccminer_lenis",
       "WEBLOCATION": "https://github.com/lenis0012/ccminer/releases/download/2.3.0-allium/ccminer-x64.exe",
       "PATH": "~\\Miners\\NVIDIA\\ccminer_lenis\\",
@@ -14,9 +20,15 @@
     },
     {
       "NAME": "nevermore",
-      "WEBLOCATION": "https://github.com/brian112358/nevermore-miner/releases/download/v0.1-alpha/nevermore-v0.1-alpha-win64-fixed.zip",
+      "WEBLOCATION": "https://github.com/brian112358/nevermore-miner-x16s/releases/download/v0.1.1/nevermore-x16s-v0.1.1-win64.zip",
+      "PATH": "~\\Miners\\NVIDIA\\nevermoreX16s\\",
+      "VER": "0.1.1"
+    },
+    {
+      "NAME": "nevermore",
+      "WEBLOCATION": "https://github.com/brian112358/nevermore-miner/releases/download/v0.2/nevermore-v0.2-win64.zip",
       "PATH": "~\\Miners\\NVIDIA\\nevermore\\",
-      "VER": "0.1"
+      "VER": "0.2"
     },
     {
       "NAME": "sgminer-x16r",
@@ -32,9 +44,9 @@
     },
     {
       "NAME": "ccminer_cryptonight",
-      "WEBLOCATION": "https://github.com/KlausT/ccminer-cryptonight/releases/download/3.00/ccminer-cryptonight-300-x64.zip",
+      "WEBLOCATION": "https://github.com/KlausT/ccminer-cryptonight/releases/download/3.01/ccminer-cryptonight-301-x64-cuda91.zip",
       "PATH": "~\\Miners\\NVIDIA\\ccminer_cryptonight\\",
-      "VER": "3.0"
+      "VER": "3.01"
     },
     {
       "NAME": "ccminer_alexishsr",
@@ -68,9 +80,9 @@
     },
     {
       "NAME": "ccminer_klaust",
-      "WEBLOCATION": "https://github.com/KlausT/ccminer/releases/download/8.20/ccminer-820-cuda8-x64.zip",
+      "WEBLOCATION": "https://github.com/KlausT/ccminer/releases/download/8.21/ccminer-821-cuda91-x64.zip",
       "PATH": "~\\Miners\\NVIDIA\\ccminer_klaust\\",
-      "VER": "8.20"
+      "VER": "8.21"
     },
     {
       "NAME": "ccminer_polytimos",
@@ -98,9 +110,9 @@
     },
     {
       "NAME": "ethdcrminer64",
-      "WEBLOCATION": "https://github.com/AIOminer/AIOMiner/files/1817770/Claymore_11.5.zip",
+      "WEBLOCATION": "https://github.com/AIOminer/AIOMiner/releases/download/Software/Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak.AMD.NVIDIA.GPU.Miner.v11.6.-.Catalyst.15.12-18.x.-.CUDA.8.0_9.1_7.5_6.5.zip",
       "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\",
-      "VER": "11.5"
+      "VER": "11.6"
     },
     {
       "NAME": "Claymore_Crypto",
@@ -110,9 +122,9 @@
     },
     {
       "NAME": "claymore_neo",
-      "WEBLOCATION": "https://github.com/AIOminer/AIOMiner/files/1817771/Claymore_NeoScrypt_1.0.zip",
+      "WEBLOCATION": "https://github.com/AIOminer/AIOMiner/releases/download/Software/Claymore.s.NeoScrypt.AMD.GPU.Miner.v1.2.zip",
       "PATH": "~\\Miners\\AMD\\clayneo\\",
-      "VER": "1.0"
+      "VER": "1.2"
     },
     {
       "NAME": "zecminer",
@@ -236,9 +248,9 @@
     },
     {
       "NAME": "phoenix",
-      "WEBLOCATION": "https://github.com/AIOminer/AIOMiner/files/1817782/PhoenixMiner_2.5d.zip",
+      "WEBLOCATION": "https://github.com/AIOminer/AIOMiner/releases/download/Software/PhoenixMiner_2.8c.zip",
       "PATH": "~\\Miners\\NVIDAMD\\phoenix\\",
-      "VER": "2.5d"
+      "VER": "2.8c"
     },
     {
       "NAME": "sgminer_sph",
