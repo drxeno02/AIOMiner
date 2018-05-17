@@ -22,7 +22,7 @@ AIOMiner project was put together to help desktop owners and rig owners alike to
  - No Fees from AIOMiner
  - AMD/NVIDIA Supported
  - Pool Management
- - 40 + Algorithums supported
+ - 40 + Algorithms supported
  - Add your own coin
  - Automatic Updates for AIO and Miners/Proccesses
  - WhatToMine.com Auto Profit Switching 
