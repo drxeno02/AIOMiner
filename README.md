@@ -22,16 +22,18 @@ AIOMiner project was put together to help desktop owners and rig owners alike to
  - No Fees from AIOMiner
  - AMD/NVIDIA Supported
  - Pool Management
- - 40 + Algorithms supported
+ - 50 + Algorithms supported
  - Add your own coin
- - Automatic Updates for AIO and Miners/Proccesses
+ - Schedule reboot
+ - Schedule restart of mining
+ - Automatic Updates for AIO and Miners/Processes
  - WhatToMine.com Auto Profit Switching 
  - Auto start mining on start of application
  - Following a schedule of coins you want to mine throughout the week
  - Idle Mining
- - Price Maruqee
+ - Price Marquee
  - Display of current Speed on the front of the application
- - Display of current GPU Power useage on the front of the application (AMD is an estimate at this time)
+ - Display of current GPU Power usage on the front of the application (AMD is an estimate at this time)
  - Enable Auto-Login for your windows machine
  - Enable AIOMiner to start as soon as you boot 
  - Backup/Import settings
