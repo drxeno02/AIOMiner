@@ -7,8 +7,9 @@
 </p>
 
 # All In One Miner
+Current Release - Alpha 8.4.0
 Quick Download: (https://AIOMiner.com)
-
+Free Online Monitoring/Alerting
 NVIDIA AND AMD SUPPORTED
 No Fees
 Community Driven
@@ -19,6 +20,8 @@ AIOMiner project was put together to help desktop owners and rig owners alike to
 
 
 ## Features Currently Avaiable
+ - Online Monitoring for Free
+ - Online alerting for Free
  - No Fees from AIOMiner
  - AMD/NVIDIA Supported
  - Pool Management
@@ -67,7 +70,7 @@ You should look at getting the latest Nvidia/Amd drivers
 Installer now installs c++ runtimes that are needed
 
 ## Built With
-
+* [Any/All mining apps]
 * [CCMiner 2.2.4, And like projects]
 * [EWBF V0.3.4b]
 * [DSTM]
