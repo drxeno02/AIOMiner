@@ -7,7 +7,7 @@
 </p>
 
 # All In One Miner
-Current Release - Alpha 8.4.0
+Current Release - Alpha 8.5.0
 Quick Download: (https://AIOMiner.com)
 Free Online Monitoring/Alerting
 NVIDIA AND AMD SUPPORTED
