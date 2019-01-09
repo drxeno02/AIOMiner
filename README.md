@@ -1,13 +1,13 @@
 
 <p align="center">
-  <img src="http://aiominer.com/images/logo1-transparent.png">
+  <img src="https://wiki.aiominer.com/downloads/.images/logo1-transparent.png">
 </p>
 <p align="center">
   <img src="http://aiominer.com/img/logo/dot1.png">
 </p>
 
 # All In One Miner
-Current Release - Alpha 8.5.0
+Current Release - Alpha 8.5.1
 Quick Download: (https://AIOMiner.com)
 Free Online Monitoring/Alerting
 NVIDIA AND AMD SUPPORTED
