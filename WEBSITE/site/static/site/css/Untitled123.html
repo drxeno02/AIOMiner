@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://v40.pingendo.com/assets/4.0.0/default/theme.css" type="text/css">
+  <script>
+    $( function() {
+      $( "#sortable" ).sortable();
+      $( "#sortable" ).disableSelection();
+    } );
+  </script>
+</head>
+
+<body class="bg-dark">
+  <div class="text-center bg-gradient p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="display-3">Pools and Coins</h3>
+              <p class="text-light">&nbsp;&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:250px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;
+    <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
+  </pingendo>
+  <div class="p-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead text-info">Here you will have the ability to add a pool/coin to your Rig/s with a few simple clicks. &nbsp;Before you get started you need to be aware of how this process works. Incorrect settings could result in a weird mining/not mining state.
+            <br> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="">
+            <li class="text-left text-danger">You can only select the all rigs button if each rig is online, and not processing anothe request. &nbsp;this is done in batches and to make sure it's done properly they all need to be in the same state. Rigs must be in an OK state to apply
+              the settings.</li>
+            <li class="text-danger">All pool settings must be tested before they can be added, we will perform a simple stratum test to ensure your pool is operational. &nbsp;If you put in incorrect information and start mining, you could put your mining rig at risk of a failure
+              or even worse...downtime</li>
+            <li class="text-danger">Any pool that you do select for a coin here it will become the primary pool for that coin. &nbsp;If you need to change it back, you would either need to re-add it or change it inside of AIOMiner
+              <br> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-3 text-primary text-left">Step 1</h1>
+          <p class="lead text-left">Please enter in the Coin Name and Select Algorithum&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form class="">
+            <div class="form-group border border-info">
+              <label>&nbsp;Coin Name</label>
+              <input type="text" class="form-control required w-75 form-control-sm">
+              <small class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <input type="text" readonly="" class="form-control-plaintext text-info" value=""> </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <form class="">
+            <div class="form-group border border-info">
+              <label>&nbsp;Coin Name</label>
+              <input type="text" class="form-control required w-75 form-control-sm">
+              <small class="form-text text-muted"></small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form class=""></form>
+        </div>
+        <div class="col-md-6">
+          <form class="">
+            <div class="form-group border border-info">
+              <label>&nbsp;Coin Name</label>
+              <input type="text" class="form-control required w-75 form-control-sm">
+              <small class="form-text text-muted"></small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(".CoinText").on('keydown',function(){
+        $(".CoinResults").val($(this).val());
+    });
+  </script>
+</body>
+
+</html>

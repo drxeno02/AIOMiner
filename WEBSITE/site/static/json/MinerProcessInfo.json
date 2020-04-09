@@ -1,0 +1,1693 @@
+{
+  "Process": [
+    {
+      "Algo": "sonoa",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a sonoa"
+        }
+      ]
+    },
+    {
+      "Algo": "bytom",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "bminer1010",
+          "PATH": "~\\Miners\\NVIDIA\\bminer1010\\",
+          "EXECUTABLE": "bminer.exe",
+          "PREFERED": "1",
+          "API": "NA",
+          "ARGS": "bminer.exe -uri tensority://_worker@_ip:_port -api 127.0.0.1:1880"
+        }
+      ]
+    },
+    {
+      "Algo": "hex",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a hex d=4 -i 22"
+        }
+      ]
+    },
+    {
+      "Algo": "renesis",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a renesis"
+        }
+      ]
+    },
+    {
+      "Algo": "SoliditySHA3",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "solidity1300",
+          "PATH": "~\\Miners\\NVIDAMD\\solidity1300\\",
+          "EXECUTABLE": "SoliditySHA3Miner.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "pool=_ip:_port address=_worker minerJsonAPI=0 minerCcminerAPI=1 donate=1.5"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "solidity1300",
+          "PATH": "~\\Miners\\NVIDAMD\\solidity1300\\",
+          "EXECUTABLE": "SoliditySHA3Miner.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "pool=_ip:_port address=_worker minerJsonAPI=0 minerCcminerAPI=1 donate=1.5"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonightXTL",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=6 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonight-lite",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=3 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        }
+      ]
+    },
+    {
+      "Algo": "aeriumx",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a aeriumx -i 20"
+        }
+      ]
+    },
+    {
+      "Algo": "zhash_btg",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ewbf05",
+          "PATH": "~\\Miners\\NVIDIA\\ewbf05\\",
+          "EXECUTABLE": "miner.exe",
+          "PREFERED": "1",
+          "API": "EWBF",
+          "ARGS": "--algo 144_5 --pers BgoldPoW --server _ip --user _worker --pass _pass --port _port --fee 0 --templimit 85 --eexit 3 --pec --api 127.0.0.1:42000 --cuda_devices _gputouse"
+        }
+      ]
+    },
+    {
+      "Algo": "zhash_snow",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ewbf05",
+          "PATH": "~\\Miners\\NVIDIA\\ewbf05\\",
+          "EXECUTABLE": "miner.exe",
+          "PREFERED": "1",
+          "API": "EWBF",
+          "ARGS": "--algo 144_5 --pers sngemPoW --server _ip --user _worker --pass _pass --port _port --fee 0 --templimit 85 --eexit 3 --pec --api 127.0.0.1:42000 --cuda_devices _gputouse"
+        }
+      ]
+    },
+    {
+      "Algo": "zhash_zcash",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ewbf05",
+          "PATH": "~\\Miners\\NVIDIA\\ewbf05\\",
+          "EXECUTABLE": "miner.exe",
+          "PREFERED": "1",
+          "API": "EWBF",
+          "ARGS": "--algo 144_5 --pers ZcashPoW --server _ip --user _worker --pass _pass --port _port --fee 0 --templimit 85 --eexit 3 --pec --api 127.0.0.1:42000 --cuda_devices _gputouse"
+        }
+      ]
+    },
+    {
+      "Algo": "zhash_safe",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ewbf05",
+          "PATH": "~\\Miners\\NVIDIA\\ewbf05\\",
+          "EXECUTABLE": "miner.exe",
+          "PREFERED": "1",
+          "API": "EWBF",
+          "ARGS": "--algo 144_5 --pers Safecoin --server _ip --user _worker --pass _pass --port _port --fee 0 --templimit 85 --eexit 3 --pec --api 127.0.0.1:42000 --cuda_devices _gputouse"
+        }
+      ]
+    },
+    {
+      "Algo": "zhash",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ewbf05",
+          "PATH": "~\\Miners\\NVIDIA\\ewbf05\\",
+          "EXECUTABLE": "miner.exe",
+          "PREFERED": "1",
+          "API": "EWBF",
+          "ARGS": "--algo 144_5 --pers BitcoinZ --server _ip --user _worker --pass _pass --port _port --fee 0 --templimit 85 --eexit 3 --pec --api 127.0.0.1:42000 --cuda_devices _gputouse"
+        }
+      ]
+    },
+    {
+      "Algo": "phi2",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a phi2"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a phi2"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a phi2 -i 19"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a phi2"
+        }
+      ]
+    },
+    {
+      "Algo": "phi1612",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a phi1612"
+        }
+      ]
+    },
+    {
+      "Algo": "x16s",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a x16s"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a x16s -i 20"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a x16s"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_avermore141",
+          "PATH": "~\\Miners\\AMD\\sgminer_avermore141\\avermore-windows\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k x16s -I 19 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "allium",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a allium"
+        }
+      ]
+    },
+    {
+      "Algo": "zero",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ewbf01",
+          "PATH": "~\\Miners\\NVIDIA\\ewbf01\\",
+          "EXECUTABLE": "Miner.exe",
+          "PREFERED": "1",
+          "API": "ewbf",
+          "ARGS": "--algo 192_7 --pers ZERO_PoW --server _ip --user _worker --pass _pass --port _port --fee 0 --templimit 85 --eexit 3 --pec --api 127.0.0.1:42000"
+        }
+      ]
+    },
+    {
+      "Algo": "x16r",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a x16r"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a x16r"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a x16r"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_avermore141",
+          "PATH": "~\\Miners\\AMD\\sgminer_avermore141\\avermore-windows\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k x16r -I 19 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "tribus",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a tribus"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a tribus"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a tribus -i 21"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a tribus"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_tribus",
+          "PATH": "~\\Miners\\AMD\\sgminer_tribus\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k tribus --shaders 1792 --lookup-gap 4 --intensity 19 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "x14",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a x14"
+        }
+      ]
+    },
+    {
+      "Algo": "c11",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a c11"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis_keccak",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis_keccak\\ccminer_alexis_keccak\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass --lookup-gap 2 -d _gputouse -a c11"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a c11"
+        }
+      ]
+    },
+    {
+      "Algo": "darkcoin-mod",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k darkcoin-mod --gpu-threads 2 --worksize 128 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "pascal",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k pascal --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "blake14r",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a decred"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a decred"
+        }
+      ]
+    },
+    {
+      "Algo": "vanilla",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k vanilla --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "blake",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k blake --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "groestl",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_nice",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_nice\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a groestl"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_klaust821",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_klaust821\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -a groestl"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k groestlcoin --gpu-threads 2 --worksize 128 --gpu-platform 1"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_sph",
+          "PATH": "~\\Miners\\AMD\\sgminer_sph\\sgminer5-grs\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": " ",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k groestlcoin --gpu-threads 2 --worksize 128 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "skein",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a skein"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a skein"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a skein"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a skein"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_skein",
+          "PATH": "~\\Miners\\AMD\\sgminer_skein\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k skeincoin --gpu-threads 2 --worksize 256 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "Myriad-Groestl",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_klaust821",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_klaust821\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a myr-gr"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a myr-gr"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k myriadcoin-groestl --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "keecakc",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_klaust821",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_klaust821\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a groestl"
+        }
+      ]
+    },
+    {
+      "Algo": "polytimos",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a poly -i 20"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a polytimos"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a poly"
+        }
+      ]
+    },
+    {
+      "Algo": "whirpool",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a whirl"
+        }
+      ]
+    },
+    {
+      "Algo": "lbry",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -a lbry"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexishsr",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -a lbry"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -a lbry"
+        }
+      ]
+    },
+    {
+      "Algo": "jha",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a jha"
+        }
+      ]
+    },
+    {
+      "Algo": "skunk",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a skunk"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a skunk"
+        }
+      ]
+    },
+    {
+      "Algo": "xevan",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a xevan -i 19"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_xevan",
+          "PATH": "~\\Miners\\AMD\\sgminer_xevan\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 --intensity 15 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "phi",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a phi"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a renesis"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a phi"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_phi",
+          "PATH": "~\\Miners\\AMD\\sgminer_phi\\SgminerPhi\\SgminerPhi\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k phi -I 21 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "keccak",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a keccakc"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a keccak -m 2"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a keccak -m 2"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k maxcoin --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "sib",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexishsr",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a sib"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_klaust821",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_klaust821\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a sib"
+        }
+      ]
+    },
+    {
+      "Algo": "blake2b",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_klaust821",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_klaust821\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-a sia -o _ip:_port -u _worker -p _pass -b 4068 -d _gputouse"
+        }
+      ]
+    },
+    {
+      "Algo": "nist5",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexishsr",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a nist5"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a nist5"
+        }
+      ]
+    },
+    {
+      "Algo": "veltor",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexishsr",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a veltor"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": " -o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a veltor"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_tribus",
+          "PATH": "~\\Miners\\AMD\\sgminer_tribus\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k veltor --intensity 19 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "blakecoin",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": " -o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a blakecoin"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a blakecoin"
+        }
+      ]
+    },
+    {
+      "Algo": "blake2s",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a blake2s"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexishsr",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a blake2s"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a blake2s"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k sia --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "hsr",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a hsr"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexishsr",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a hsr"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_hsr",
+          "PATH": "~\\Miners\\AMD\\sgminer_hsr\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k hsr --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "lyra2z",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a lyra2z"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a lyra2z"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "coolminer16",
+          "PATH": "~\\Miners\\NVIDIA\\coolminer16\\",
+          "EXECUTABLE": "coolMiner-x64.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a lyra2z"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a lyra2z"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_lyra2z",
+          "PATH": "~\\Miners\\AMD\\sgminer_lyra2z\\kernel\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k lyra2z --worksize 32 --intensity 18 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "x11evo",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a x11evo"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": " -o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a x11evo"
+        }
+      ]
+    },
+    {
+      "Algo": "blakecoin",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexishsr",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a blakecoin"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": " -o _ip:_port -u _worker -p _pass _port -R 5 -r 3 -b 4068 -d _gputouse -a blakecoin"
+        }
+      ]
+    },
+    {
+      "Algo": "timetravel",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_skunk",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_skunk\\",
+          "EXECUTABLE": "ccminer-x64-80.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": " -o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a timetravel"
+        }
+      ]
+    },
+    {
+      "Algo": "equihash",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "dstm061",
+          "PATH": "~\\Miners\\NVIDIA\\dstm061\\zm_0.6.1_win\\",
+          "EXECUTABLE": "zm.exe",
+          "PREFERED": " ",
+          "API": "dstm061",
+          "ARGS": "--server _ip --port _port --user _worker --pass _pass --telemetry=127.0.0.1:42002 --dev _gputouse"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ewbf",
+          "PATH": "~\\Miners\\NVIDIA\\ewbf\\",
+          "EXECUTABLE": "miner.exe",
+          "PREFERED": "1",
+          "API": "ewbf",
+          "ARGS": "--server _ip --user _worker --pass _pass --port _port --fee 0 --templimit 85 --eexit 3 --pec --api 127.0.0.1:42000 --cuda_devices _gputouse"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "zecminer",
+          "PATH": "~\\Miners\\AMD\\zecminer\\",
+          "EXECUTABLE": "ZecMiner64.exe",
+          "PREFERED": "1",
+          "API": "claymoreold",
+          "ARGS": "-zpool _ip:_port -zwal _worker -zpsw _pass -allpools 1"
+        }
+      ]
+    },
+    {
+      "Algo": "x17",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a x17"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a x17 -i 20"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": " -o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a x17"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexis",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexis\\ccminer alexis-1.0 windows\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": " -o _ip:_port -u _worker -p _pass _port -R 5 -r 3 -b 4068 -d _gputouse -a x17 -i 20"
+        }
+      ]
+    },
+    {
+      "Algo": "x11gost",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_nice",
+          "PATH": "~\\Miners\\AMD\\sgminer_nice\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _pass --device _gputouse --api-port 4028 -k sibcoin-mod --gpu-threads 2 --worksize 64 --gpu-platform 1"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_x11g",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_x11g\\",
+          "EXECUTABLE": "ccminer_x11gost.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -a sib -i 20"
+        }
+      ]
+    },
+    {
+      "Algo": "bitcore",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "t_rex063",
+          "PATH": "~\\Miners\\NVIDIA\\t_rex063\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a bitcore"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_enemy117",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_enemy117\\",
+          "EXECUTABLE": "z-enemy.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a bitcore -i 20"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_skunk",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_skunk\\",
+          "EXECUTABLE": "ccminer-x64-80.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": " -o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a bitcore"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "sgminer_bitcore",
+          "PATH": "~\\Miners\\AMD\\sgminer_bitcore\\SgminerBitcore\\SgminerBitcore\\",
+          "EXECUTABLE": "sgminer.exe",
+          "PREFERED": "1",
+          "API": "sgminer",
+          "ARGS": "--api-listen -o _ip:_port -u _worker -p _port --device _gputouse --api-port 4028 --kernel timetravel10 -I 21 --gpu-platform 1"
+        }
+      ]
+    },
+    {
+      "Algo": "Lyra2REv2",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a lyra2v2"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_alexishsr",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_alexishsr\\",
+          "EXECUTABLE": "ccminer-alexis.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a lyra2v2"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_polytimos",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_polytimos\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a lyra2v2"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a lyra2v2"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "lyclminer",
+          "PATH": "~\\Miners\\AMD\\lyclminer\\",
+          "EXECUTABLE": "lyclMiner.exe",
+          "PREFERED": "1",
+          "API": "NA",
+          "ARGS": " "
+        }
+      ]
+    },
+    {
+      "Algo": "ethash",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "nvidia-ethdcrminer64",
+          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak AMD+NVIDIA GPU Miner v11.9\\",
+          "EXECUTABLE": "EthDcrMiner64.exe",
+          "PREFERED": " ",
+          "API": "claymore",
+          "ARGS": "-epool _ip:_port -ewal _worker -epsw _pass -allpools 1 -allcoins 1 -wd 1 -di _gputouse"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "amd-ethdcrminer64",
+          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak AMD+NVIDIA GPU Miner v11.9\\",
+          "EXECUTABLE": "EthDcrMiner64.exe",
+          "PREFERED": " ",
+          "API": "claymore",
+          "ARGS": "-epool _ip:_port -ewal _worker -epsw _pass -allpools 1 -allcoins 1 -wd 1 -di _gputouse"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "nvidia-phoenix",
+          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_3.0c\\",
+          "EXECUTABLE": "PhoenixMiner.exe",
+          "PREFERED": "1",
+          "API": "phoenix",
+          "ARGS": "-pool _ip:_port -wal _worker"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "amd-phoenix",
+          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_3.0c\\",
+          "EXECUTABLE": "PhoenixMiner.exe",
+          "PREFERED": "1",
+          "API": "phoenix",
+          "ARGS": "-pool _ip:_port -wal _worker"
+        }
+      ]
+    },
+    {
+      "Algo": "neoscrypt",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "cryptodredge090",
+          "PATH": "~\\Miners\\NVIDIA\\cryptodredge090\\",
+          "EXECUTABLE": "CryptoDredge.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a neoscrypt"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": " -a neoscrypt -o _ip:_port -u _worker -p _pass"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_klaust821",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_klaust821\\",
+          "EXECUTABLE": "ccminer.exe",
+          "PREFERED": "1",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -a Neoscrypt"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "nsgminer",
+          "PATH": "~\\Miners\\AMD\\nsgminer\\nsgminer-win64-0.9.4\\",
+          "EXECUTABLE": "nsgminer.exe",
+          "PREFERED": " ",
+          "API": "sgminer",
+          "ARGS": "-D --neoscrypt -o _ip:_port -u _worker -p _pass -I 15 --worksize 16 --api-listen --api-allow W:127.0.0.1 --gpu-platform 1"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "clayneo",
+          "PATH": "~\\Miners\\AMD\\clayneo\\Claymore's NeoScrypt AMD GPU Miner v1.2\\",
+          "EXECUTABLE": "NeoScryptMiner.exe",
+          "PREFERED": "1",
+          "API": "claymore",
+          "ARGS": "-r -1 -pool _ip:_port  -wal _worker -psw _pass -a 1"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonightFEST",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=9 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonightFast",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=8 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonightXHVheavy",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=7 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonighttubeheavy",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=5 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonightv7light",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=4 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonightlight",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=3 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonightheavy",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": " ",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=2 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "xmrig_amd261",
+          "PATH": "~\\Miners\\AMD\\xmrig_amd261\\",
+          "EXECUTABLE": "xmrig-amd.exe",
+          "PREFERED": "1",
+          "API": "xmrig",
+          "ARGS": "-o _ip:_port -u _worker -p _pass --api-port 33999 --donate-level 1 -a cryptonight-heavy"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "xmrig_nvida",
+          "PATH": "~\\Miners\\NVIDIA\\xmrig_nvidia261\\",
+          "EXECUTABLE": "xmrig-nvidia.exe",
+          "PREFERED": "1",
+          "API": "xmrig",
+          "ARGS": "-o _ip:_port -u _worker -p _pass --api-port 33999 --donate-level 1 -a cryptonight-heavy"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonightv7",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": "1",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=1 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "xmrig_amd261",
+          "PATH": "~\\Miners\\AMD\\xmrig_amd261\\",
+          "EXECUTABLE": "xmrig-amd.exe",
+          "PREFERED": " ",
+          "API": "xmrig",
+          "ARGS": "-o _ip:_port -u _worker -p _pass --api-port 33999 --donate-level 1 -a cryptonightv7 --variant 1"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "xmrig_nvida",
+          "PATH": "~\\Miners\\NVIDIA\\xmrig_nvidia261\\",
+          "EXECUTABLE": "xmrig-nvidia.exe",
+          "PREFERED": "1",
+          "API": "xmrig",
+          "ARGS": "-o _ip:_port -u _worker -p _pass --api-port 33999 --donate-level 1 -a cryptonightv7 --variant 1"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_cryptonight",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_cryptonight305\\",
+          "EXECUTABLE": "ccminer-cryptonight.exe",
+          "PREFERED": " ",
+          "API": "NA",
+          "ARGS": "-a monero -o _ip:_port -u _worker -p _pass --bfactor=10 --bsleep=30"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "claymore_crypto",
+          "PATH": "~\\Miners\\AMD\\claymore_crypto\\Claymore CryptoNote AMD GPU Miner v11.3 - POOL\\",
+          "EXECUTABLE": "NsGpuCNMiner.exe",
+          "PREFERED": " ",
+          "API": "claymore",
+          "ARGS": "-xpool _ip:_port -xwal _worker -xpsw _pass -pow7 1 -dmem 0"
+        }
+      ]
+    },
+    {
+      "Algo": "cryptonight",
+      "Info": [
+        {
+          "GPUx": "AMD",
+          "MINER": "castxmr140",
+          "PATH": "~\\Miners\\AMD\\castxmr140\\",
+          "EXECUTABLE": "cast_xmr-vega.exe",
+          "PREFERED": " ",
+          "API": "castxmr",
+          "ARGS": "-S _ip:_port -u _worker --algo=0 -p _pass --fastjobswitch --ratewatchdog --remoteport 3444 --remoteaccess  --opencl 1 --forcecompute"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "xmrig_amd261",
+          "PATH": "~\\Miners\\AMD\\xmrig_amd261\\",
+          "EXECUTABLE": "xmrig-amd.exe",
+          "PREFERED": "1",
+          "API": "xmrig",
+          "ARGS": "-o _ip:_port -u _worker -p _pass --api-port 33999 --donate-level 1 -a cryptonight --variant 0"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "xmrig_nvida",
+          "PATH": "~\\Miners\\NVIDIA\\xmrig_nvidia261\\",
+          "EXECUTABLE": "xmrig-nvidia.exe",
+          "PREFERED": "1",
+          "API": "xmrig",
+          "ARGS": "-o _ip:_port -u _worker -p _pass --api-port 33999 --donate-level 1 -a cryptonight --variant 0"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_tpruvot230",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_tpruvot230\\",
+          "EXECUTABLE": "ccminer-x64.exe",
+          "PREFERED": " ",
+          "API": "ccminer",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -R 5 -r 3 -b 4068 -d _gputouse -a cryptonight"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "ccminer_cryptonight",
+          "PATH": "~\\Miners\\NVIDIA\\ccminer_cryptonight305\\",
+          "EXECUTABLE": "ccminer-cryptonight.exe",
+          "PREFERED": " ",
+          "API": "NA",
+          "ARGS": "-a cryptonight -o _ip:_port -u _worker -p _pass --bfactor=10 --bsleep=30"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "claymore_crypto",
+          "PATH": "~\\Miners\\AMD\\claymore_crypto\\Claymore CryptoNote AMD GPU Miner v11.3 - POOL\\",
+          "EXECUTABLE": "NsGpuCNMiner.exe",
+          "PREFERED": " ",
+          "API": "claymore",
+          "ARGS": "-xpool _ip:_port -xwal _worker -xpsw _pass"
+        }
+      ]
+    }
+  ]
+}
