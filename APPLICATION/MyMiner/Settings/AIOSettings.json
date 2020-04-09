@@ -1,0 +1,206 @@
+{
+  "AIOS": {
+    "MAINAPP": [
+      {
+        "type": "email",
+        "value": ""
+      },
+      {
+        "type": "automine",
+        "value": "False"
+      },
+      {
+        "type": "lastmined",
+        "value": ""
+      },
+      {
+        "type": "idele",
+        "value": "False"
+      },
+      {
+        "type": "ideltmr",
+        "value": "320"
+      },
+      {
+        "type": "prices",
+        "value": "GBP"
+      },
+      {
+        "type": "speed",
+        "value": ""
+      },
+      {
+        "type": "errr",
+        "value": "False"
+      },
+      {
+        "type": "reboot",
+        "value": "5"
+      },
+      {
+        "type": "firstrun",
+        "value": "Yes"
+      },
+      {
+        "type": "monday",
+        "value": ""
+      },
+      {
+        "type": "tuesday",
+        "value": ""
+      },
+      {
+        "type": "wednesday",
+        "value": ""
+      },
+      {
+        "type": "thursday",
+        "value": ""
+      },
+      {
+        "type": "friday",
+        "value": ""
+      },
+      {
+        "type": "saturday",
+        "value": ""
+      },
+      {
+        "type": "sunday",
+        "value": ""
+      },
+      {
+        "type": "sch",
+        "value": "False"
+      },
+      {
+        "type": "coin",
+        "value": ""
+      },
+      {
+        "type": "ip",
+        "value": ""
+      },
+      {
+        "type": "pool",
+        "value": ""
+      },
+      {
+        "type": "algo",
+        "value": ""
+      },
+      {
+        "type": "worker",
+        "value": ""
+      },
+      {
+        "type": "worker",
+        "value": ""
+      },
+      {
+        "type": "password",
+        "value": ""
+      },
+      {
+        "type": "port",
+        "value": ""
+      },
+      {
+        "type": "intensity",
+        "value": ""
+      },
+      {
+        "type": "gpu0",
+        "value": "True"
+      },
+      {
+        "type": "gpu1",
+        "value": "True"
+      },
+      {
+        "type": "gpu2",
+        "value": "True"
+      },
+      {
+        "type": "gpu3",
+        "value": "True"
+      },
+      {
+        "type": "gpu4",
+        "value": "True"
+      },
+      {
+        "type": "gpu5",
+        "value": "True"
+      },
+      {
+        "type": "gpu6",
+        "value": "True"
+      },
+      {
+        "type": "gpu7",
+        "value": "True"
+      },
+      {
+        "type": "gpu8",
+        "value": "True"
+      },
+      {
+        "type": "gpu9",
+        "value": "True"
+      },
+      {
+        "type": "gpu10",
+        "value": "True"
+      },
+      {
+        "type": "gpu11",
+        "value": "True"
+      },
+      {
+        "type": "nvidia",
+        "value": "False"
+      },
+      {
+        "type": "amd",
+        "value": "False"
+      },
+      {
+        "type": "Restart",
+        "value": "False"
+      },
+      {
+        "type": "coinprice1",
+        "value": "BTC"
+      },
+      {
+        "type": "coinprice2",
+        "value": "ETH"
+      },
+      {
+        "type": "coinprice3",
+        "value": "BTCZ"
+      },
+      {
+        "type": "coinprice4",
+        "value": ""
+      },
+      {
+        "type": "coinprice5",
+        "value": ""
+      },
+      {
+        "type": "coinprice6",
+        "value": ""
+      },
+      {
+        "type": "coinprice7",
+        "value": ""
+      },
+      {
+        "type": "baseapiurl",
+        "value": "{{API}}"
+      }
+    ]
+  }
+}

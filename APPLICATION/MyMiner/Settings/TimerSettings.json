@@ -1,0 +1,105 @@
+﻿{
+  "TimerSettings": [
+    {
+      "hour": "1 AM",
+      "on": "False"
+    },
+    {
+      "hour": "2 AM",
+      "on": "False"
+    },
+    {
+      "hour": "3 AM",
+      "on": "False"
+    },
+    {
+      "hour": "4 AM",
+      "on": "False"
+    },
+    {
+      "hour": "5 AM",
+      "on": "False"
+    },
+    {
+      "hour": "6 AM",
+      "on": "False"
+    },
+    {
+      "hour": "7 AM",
+      "on": "False"
+    },
+    {
+      "hour": "8 AM",
+      "on": "False"
+    },
+    {
+      "hour": "9 AM",
+      "on": "False"
+    },
+    {
+      "hour": "10 AM",
+      "on": "False"
+    },
+    {
+      "hour": "11 AM",
+      "on": "False"
+    },
+    {
+      "hour": "12 PM",
+      "on": "False"
+    },
+    {
+      "hour": "1 PM",
+      "on": "False"
+    },
+    {
+      "hour": "2 PM",
+      "on": "False"
+    },
+    {
+      "hour": "3 PM",
+      "on": "False"
+    },
+    {
+      "hour": "4 PM",
+      "on": "False"
+    },
+    {
+      "hour": "5 PM",
+      "on": "False"
+    },
+    {
+      "hour": "6 PM",
+      "on": "False"
+    },
+    {
+      "hour": "7 PM",
+      "on": "False"
+    },
+    {
+      "hour": "8 PM",
+      "on": "False"
+    },
+    {
+      "hour": "9 PM",
+      "on": "False"
+    },
+    {
+      "hour": "10 PM",
+      "on": "False"
+    },
+    {
+      "hour": "11 PM",
+      "on": "False"
+    },
+    {
+      "hour": "12 AM",
+      "on": "False"
+    },
+    {
+      "hour": "AppTimedMining",
+      "on": "False"
+    }
+
+  ]
+}

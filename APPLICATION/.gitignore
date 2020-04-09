@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/MyMiner/v15/Server/sqlite3
+/.vs/AIO-MAIN/v15
+/.vs
+/MyMiner/bin/Debug/Log
+/MyMiner/bin/Debug/Settings/bkup
+/MyMiner/bin/Debug/Settings/Settings.zip
+/MyMiner/bin/Debug/Miners/NVIDAMD/ethdcrminer64/Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal AMD+NVIDIA GPU Miner v11.0
+/MyMiner/bin/Debug/Miners/NVIDAMD/ethdcrminer64/Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak AMD+NVIDIA GPU Miner v11.7
+/MyMiner/bin/Debug
+/MyMiner/Resources

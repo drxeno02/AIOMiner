@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B4B0F13-66EC-452F-926D-16B8A9704FF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AIOminer.My.MyApplication</StartupObject>
+    <RootNamespace>AIOminer</RootNamespace>
+    <AssemblyName>AIOminer</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AIOminer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AIOminer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AIO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5602C971DBB920DDA091C8C74B0ECE8FE844BFBA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.7.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.7.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenHardwareMonitorLib, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenHardwareMonitor.0.7.1\lib\net40\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SevenZipExtractor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SevenZipExtractor.1.0.12\lib\net45\SevenZipExtractor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AIO.Designer.vb">
+      <DependentUpon>AIO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Api\AIOMinerWebAPI.vb" />
+    <Compile Include="Api\DoWorkForApiRequest.vb" />
+    <Compile Include="Api\RigsApi.vb" />
+    <Compile Include="Api\RigsWork.vb" />
+    <Compile Include="DonateForm.Designer.vb">
+      <DependentUpon>DonateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonateSettings.Designer.vb">
+      <DependentUpon>DonateSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DonateSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GpuStats.Designer.vb">
+      <DependentUpon>GpuStats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GpuStats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinerSettings\kcode.vb" />
+    <Compile Include="MinerSettings\NewCoins.Designer.vb">
+      <DependentUpon>NewCoins.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinerSettings\NewCoins.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinerSettings\TimerSettings.vb" />
+    <Compile Include="MiningFrm.Designer.vb">
+      <DependentUpon>MiningFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MiningFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="NewAPI.Designer.vb">
+      <DependentUpon>NewAPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThirdParty.Designer.vb">
+      <DependentUpon>ThirdParty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdParty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advertising.Designer.vb">
+      <DependentUpon>Advertising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Advertising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup.Designer.vb">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coins\ClayMore.vb" />
+    <Compile Include="Coins\CoinMining.vb" />
+    <Compile Include="Coins\CoinSettings.Designer.vb">
+      <DependentUpon>CoinSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Coins\CoinSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coins\MinerDownload.vb" />
+    <Compile Include="Coins\TestPool.Designer.vb">
+      <DependentUpon>TestPool.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Coins\TestPool.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalMessaging\Email.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
+    <Compile Include="MinerSettings\AIOSettings.vb" />
+    <Compile Include="General_Utils\General_Utils.vb" />
+    <Compile Include="General_Utils\MinerInstances.vb" />
+    <Compile Include="Hardware\DeviceInfo.vb" />
+    <Compile Include="Hardware\GPU.vb" />
+    <Compile Include="Idle.Designer.vb">
+      <DependentUpon>Idle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Idle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JSON_Utils\JSON_Utils.vb" />
+    <Compile Include="Logger\Log.vb" />
+    <Compile Include="MHs.Designer.vb">
+      <DependentUpon>MHs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MHs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coins\MinerApi.vb" />
+    <Compile Include="MinerSettings\CustomCoin.Designer.vb">
+      <DependentUpon>CustomCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinerSettings\CustomCoin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinerSettings\MinerPInfo.vb" />
+    <Compile Include="MinerSettings\MinersJsonUpdate.vb" />
+    <Compile Include="MinerSettings\PoolAdvanced.Designer.vb">
+      <DependentUpon>PoolAdvanced.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinerSettings\PoolAdvanced.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinerSettings\PoolAdvancedSettings.vb" />
+    <Compile Include="MinerSettings\Pools.vb" />
+    <Compile Include="MinerSettings\PoolSettings.Designer.vb">
+      <DependentUpon>PoolSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinerSettings\PoolSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinerStopped.Designer.vb">
+      <DependentUpon>MinerStopped.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinerStopped.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\RestartSettings.Designer.vb">
+      <DependentUpon>RestartSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\RestartSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AIOMiner.Designer.vb">
+      <DependentUpon>AIOMiner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AIOMiner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyEmail.Designer.vb">
+      <DependentUpon>MyEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overclocker.Designer.vb">
+      <DependentUpon>Overclocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Overclocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Profitability\Downloader.Designer.vb">
+      <DependentUpon>Downloader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\Downloader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\Profitability.Designer.vb">
+      <DependentUpon>Profitability.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\Profitability.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\ProfitabilityClass.vb" />
+    <Compile Include="Profitability\ProfitClass.vb" />
+    <Compile Include="Profitability\Wallets.vb" />
+    <Compile Include="Restart.Designer.vb">
+      <DependentUpon>Restart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Restart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule.Designer.vb">
+      <DependentUpon>Schedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimedSettings.Designer.vb">
+      <DependentUpon>TimedSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TimedSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSettings.Designer.vb">
+      <DependentUpon>UpdateSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome\Welcome.Designer.vb">
+      <DependentUpon>Welcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\Welcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome\Welcome_New_2.Designer.vb">
+      <DependentUpon>Welcome_New_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\Welcome_New_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome\Welcome_New_1.Designer.vb">
+      <DependentUpon>Welcome_New_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\Welcome_New_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome\Welcome_New_3.Designer.vb">
+      <DependentUpon>Welcome_New_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\Welcome_New_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome\Welcome_New_4.Designer.vb">
+      <DependentUpon>Welcome_New_4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\Welcome_New_4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Whattomine\whattomine_line.vb" />
+    <Compile Include="WindowsSettings\Autologin.Designer.vb">
+      <DependentUpon>Autologin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsSettings\Autologin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsSettings\StartOnBoot.Designer.vb">
+      <DependentUpon>StartOnBoot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsSettings\StartOnBoot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AIO.resx">
+      <DependentUpon>AIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonateForm.resx">
+      <DependentUpon>DonateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonateSettings.resx">
+      <DependentUpon>DonateSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GpuStats.resx">
+      <DependentUpon>GpuStats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinerSettings\NewCoins.resx">
+      <DependentUpon>NewCoins.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiningFrm.resx">
+      <DependentUpon>MiningFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAPI.resx">
+      <DependentUpon>NewAPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThirdParty.resx">
+      <DependentUpon>ThirdParty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advertising.resx">
+      <DependentUpon>Advertising.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup.resx">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coins\CoinSettings.resx">
+      <DependentUpon>CoinSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coins\TestPool.resx">
+      <DependentUpon>TestPool.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idle.resx">
+      <DependentUpon>Idle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MHs.resx">
+      <DependentUpon>MHs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinerSettings\CustomCoin.resx">
+      <DependentUpon>CustomCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinerSettings\PoolAdvanced.resx">
+      <DependentUpon>PoolAdvanced.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinerSettings\PoolSettings.resx">
+      <DependentUpon>PoolSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinerStopped.resx">
+      <DependentUpon>MinerStopped.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\RestartSettings.resx">
+      <DependentUpon>RestartSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AIOMiner.resx">
+      <DependentUpon>AIOMiner.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyEmail.resx">
+      <DependentUpon>MyEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overclocker.resx">
+      <DependentUpon>Overclocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\Downloader.resx">
+      <DependentUpon>Downloader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\Profitability.resx">
+      <DependentUpon>Profitability.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restart.resx">
+      <DependentUpon>Restart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule.resx">
+      <DependentUpon>Schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimedSettings.resx">
+      <DependentUpon>TimedSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSettings.resx">
+      <DependentUpon>UpdateSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome\Welcome.resx">
+      <DependentUpon>Welcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome\Welcome_New_2.resx">
+      <DependentUpon>Welcome_New_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome\Welcome_New_1.resx">
+      <DependentUpon>Welcome_New_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome\Welcome_New_3.resx">
+      <DependentUpon>Welcome_New_3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome\Welcome_New_4.resx">
+      <DependentUpon>Welcome_New_4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsSettings\Autologin.resx">
+      <DependentUpon>Autologin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsSettings\StartOnBoot.resx">
+      <DependentUpon>StartOnBoot.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\DataSources\AIOminer.My.MySettings.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyMiner_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Settings\AIOMiner.json" />
+    <None Include="Settings\AIOMiner_Default.json" />
+    <None Include="Settings\AIOProfitability.json" />
+    <None Include="Settings\AIOSettings.json" />
+    <None Include="Settings\MinerProcessInfo.json" />
+    <None Include="Settings\TimerSettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AIO.ico" />
+    <Content Include="images\zcash-logo-1.png" />
+    <Content Include="ProjectNotes\TextFile1.txt" />
+    <None Include="Resources\Checkmark.png" />
+    <None Include="Resources\neutral.png" />
+    <None Include="Resources\pool-logo-1.png" />
+    <None Include="Resources\redx.png" />
+    <None Include="Resources\monero.png" />
+    <None Include="Resources\monero_logo_1.png" />
+    <None Include="Resources\feathercoin_logo_1.png" />
+    <None Include="Resources\Checkmark-300px.png" />
+    <None Include="Resources\bitcoingold_logo_1.png" />
+    <None Include="Resources\bytecoin_logo_1.png" />
+    <None Include="Resources\electroneum_logo_1.png" />
+    <None Include="Resources\ellaism_logo_1.png" />
+    <None Include="Resources\ethereumclassic_logo_1.png" />
+    <None Include="Resources\expanse_logo_1.png" />
+    <None Include="Resources\halcyon_logo_1.png" />
+    <None Include="Resources\karbo_logo_1.png" />
+    <None Include="Resources\metaverse_logo_1.png" />
+    <None Include="Resources\musicoin_logo_1.png" />
+    <None Include="Resources\orbit_logo_1.png" />
+    <None Include="Resources\pirl_logo_1.png" />
+    <None Include="Resources\sumokoin_logo_1.png" />
+    <None Include="Resources\trezarcoin_logo_1.jpg" />
+    <None Include="Resources\bitcoinz_logo_1.jpg" />
+    <None Include="Resources\logo1_transparent_welcome.png" />
+    <None Include="Resources\zclassic_logo_1.png" />
+    <None Include="Resources\vivo_logo_1.png" />
+    <None Include="Resources\ubiq_logo_1.png" />
+    <None Include="Resources\verge_logo_1.png" />
+    <None Include="Resources\votecoin_logo_1.png" />
+    <None Include="Resources\aiominer_logo_1.png" />
+    <None Include="Resources\DButt.jpg" />
+    <None Include="Resources\nvidia_logo.png" />
+    <None Include="Resources\AIO8_Welcome.jpg" />
+    <None Include="Resources\AIO8_Welcome2.jpg" />
+    <None Include="Resources\logo1_transparent_welcome_8.jpg" />
+    <None Include="Resources\logo1_transparent_welcome_81.jpg" />
+    <None Include="Resources\AIO_RED_STOP.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\81.png" />
+    <None Include="Resources\ETH.png" />
+    <None Include="Resources\zcash-logo-gold.png" />
+    <None Include="Resources\zcash.png" />
+    <None Include="Resources\zcash1.png" />
+    <None Include="Resources\jax.png" />
+    <None Include="Resources\jax1.png" />
+    <None Include="Resources\AIO_RED_STOP1.png" />
+    <None Include="Resources\AIO_GREEN.png" />
+    <None Include="Resources\AIO_RED.png" />
+    <None Include="Resources\AIO.png" />
+    <None Include="Resources\exodus.png" />
+    <None Include="Resources\BTG.png" />
+    <None Include="Resources\ETC.png" />
+    <None Include="Resources\ETC2.png" />
+    <None Include="Resources\BitcoinGold-Icon-yelow.png" />
+    <Content Include="Resources\LH2-Stop-icon.png" />
+    <None Include="Resources\STOP.png" />
+    <None Include="Resources\START.png" />
+    <None Include="Resources\MrMiner.jpg" />
+    <None Include="images\shovel.png" />
+    <Content Include="images\neutral.png" />
+    <Content Include="images\Checkmark.png" />
+    <Content Include="images\redx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\SevenZipExtractor.1.0.12\build\SevenZipExtractor.targets" Condition="Exists('..\packages\SevenZipExtractor.1.0.12\build\SevenZipExtractor.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SevenZipExtractor.1.0.12\build\SevenZipExtractor.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SevenZipExtractor.1.0.12\build\SevenZipExtractor.targets'))" />
+  </Target>
+</Project>

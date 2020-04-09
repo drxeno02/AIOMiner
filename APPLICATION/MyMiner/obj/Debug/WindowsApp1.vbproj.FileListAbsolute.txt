@@ -1,0 +1,12 @@
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.Cache
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\MEGAPC\AppData\Local\Temporary Projects\WindowsApp1\obj\Debug\WindowsApp1.pdb

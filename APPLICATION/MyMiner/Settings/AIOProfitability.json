@@ -1,0 +1,13 @@
+{
+  "Profitability": {
+    "Algorithm": [
+      {
+        "type": "Ethash",
+        "MH": "38000",
+        "PowerDraw": "134",
+        "LastTimeRan": "2/19/2018",
+        "Miner": "phoenix"
+      }
+    ]
+  }
+}

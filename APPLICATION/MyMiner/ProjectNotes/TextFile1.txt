@@ -1,0 +1,55 @@
+﻿Release 6
+Release 6.1
+- Fixed issue with monitoring on CCMiner
+- Added the ability to change your intensity for CCMiner (This is for every CCMiner algo, not just the coin)
+- Fixed issue where the first time you loaded the application it wouldn't find any video cards
+- You can't run two instances of AIOMiner
+- Added new logo
+- Added a video on the internet about this..find it..
+Release 6.2
+- Fixed the "OKHERE" from "hotpatch1" when mining with CCMiner
+Release 6.3
+- Fixed issue where if you were mining and then selected idle mining previous mining would be stuck in a loop
+- Fixed issue where if you clicked on the countdown in button one it would start a shutdown of processes, now it will do nothing
+- Fixed issue if you clicked X on the AIOMiner while mining you would be locked in a death spiral.  It will now close the mining then kill it's self
+- Fixed issue where the pool selecter was not displaying the correct information, and wouldn't update if it was a primary pool
+- Fixed issue where AIO Monitor was the last thing closed when stopping, this would cause an issue where the monitor would see that mining stopped and try to restart it.  Now it will be the first thing closed
+- Improved how we close your mining vs doing a loop of all processes, now knows what you opened and closes it
+- Removed the need for miner.log with EWBF, it now uses the EWBF API for SOL/S and error checking
+- Added the ability to clear logs with new "clear logs button"
+- Added the ability to minimize AIOMiner to the bottom corner
+- Adjusted the EWBF temp limit to 85
+- Added the ability to adjust your intensity for Lyra2REv2 Coins (This is across the board, not coin specific)
+- Adjusted the CCMiner default intensity to 21
+- Added a check for the IP pool to not actaully contain the word IP (Keith Error 1)
+- You may now select to enable or disable video cards to use when mining with Equihash/EWBF (Enabled is on by default)
+- AIO Settings -> Exit, will now close all mining operations before closing the application
+- Fixed AIO Monitor not staying on top (This will still show even if you minimize)
+- Updated version to 6.3 bottom left hand corner
+
+Release 7
+- Added in support for AMD Video Cards
+- AIOMiner will send you details about the machine (IP address,hostname,coin it's mining) when it starts mining 
+- AIOMiner will be displayed in e-mail alerts vs old project name MyMiner
+- Fixed an issue where coin name was not being displayed in log's and messages when starting/restarting
+- Removed the 6.3 fix for idle mining as that didn't work at all.  Changed the way it works and tested furiously.
+- Moved the monitor window to be on the main fourm at the bottom
+- Removed the minimize to the bottom right corner shenannogins
+- Replaced ETHMiner with Claymore
+- Usining ccminer-x64 (Latest Release)
+- Moved software over to ~\Miners\
+- Allowed Enable/Disable of GPU's for all supported Algorithiums
+- Added MKX for AMD (Lyra2rev2) (No API/No way to get power/hash at this time)
+- Added Exit button on Video Card Settings
+
+- 007c
+- Fixed issue where neoscrypt was not working by default for Nvidia, users needed to remove --devices 01234567
+- Fixed issue where if you saved a pool, then changed coins, the old pool name would stay in the list of pools
+- Fixed Orbit Image
+- Fixed Ubiq Image
+- Fixed Verge Image
+- Fixed Votecoin Image 
+- Fixed Pool Settings advanced issues interfering with mining config 
+- Fixed big red X on stat bar
+- Changed to use collection of processes (aka miners ) when started and killed
+
