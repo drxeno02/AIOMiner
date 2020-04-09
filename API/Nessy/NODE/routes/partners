@@ -1,0 +1,45 @@
+/////////////////////////////////////
+//       Post Partner Info
+////////////////////////////////////
+exports.updatepartner = function(req,res){
+var partnerinfo={
+      "name":req.body.name,
+      "logourl":req.body.logourl,
+      "description":req.body.description,
+    }
+    // Check if the API KEY IS LEGIT //
+     connection.query('INSERT INTO PARTNERS SET ?',partnerinfo, function (error, results, fields) {
+       if (error) {
+          console.log("error ocurred",error);
+          res.status(400).send({
+            "error":"Failed to connect to the database(1)"
+       })
+     }else{
+       res.status(200).send({
+         "results": results
+       })
+     }})};
+/////////////////////////////////////
+//       Get Partner Info
+////////////////////////////////////
+exports.getpartners = function(req,res){
+  connection.query('SELECT * FROM PARTNERS', function (error, result, fields) {
+    if (error) {
+      //console.log("error ocurred",error);
+    res.status(400).send({
+        "error":"Internal error"
+      })
+    }else {
+      if(result.length >0){
+        console.log(result)
+        res.status(200).send({
+         "results": result
+        })
+      }else{
+        console.log(result)
+        res.status(200).send({
+          "results":[]
+        })
+      }
+    }});
+};

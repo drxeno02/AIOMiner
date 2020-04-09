@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for AIOMiner.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "author": "Bobby G. Roberts Jr.",
+  "license": "MIT",
+  "dependencies": {
+    "apikey": "^0.1.2",
+    "apikeygen": "^0.2.0",
+    "bcrypt": "^3.0.2",
+    "bcrypt-promise": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "config": "^1.30.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mandrill-api": "^1.0.45",
+    "mysql": "^2.15.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "paypal-rest-sdk": "^1.8.1",
+    "sequelize": "^4.37.6"
+  }
+}
