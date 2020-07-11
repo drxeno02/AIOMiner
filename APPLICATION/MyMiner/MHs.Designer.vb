@@ -62,7 +62,7 @@ Partial Class MHs
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MHs"
         Me.Text = "Speed"
-        Me.TopMost = True
+        Me.TopMost = False
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -33,7 +33,7 @@ Public Class About
 Special Thank you to all of our Alpha Testers!
 All of the software that you are downloading ""CCMINER"", ""CLAYMORE"", etc, etc are brought to you by those developers, any fees they may have implied have not been tampered with. If you are one of those developers and wish that your software is no longer used in AIOMiner please e-mail us at brob@aiominer.com & shane@aiominer.com"
 
-        RichTextBox1.Text = RichTextBox1.Text & " AbrlrlRdduu"
+        RichTextBox1.Text = RichTextBox1.Text & "Konami"
         ' This call is required by the designer.
         ' InitializeComponent()
 

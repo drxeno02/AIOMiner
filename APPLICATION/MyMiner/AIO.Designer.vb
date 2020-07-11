@@ -85,17 +85,9 @@ Partial Class AIO
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.LineShape6 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape7 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape8 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape9 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
@@ -749,7 +741,6 @@ Partial Class AIO
         Me.GroupBox2.Controls.Add(Me.Label30)
         Me.GroupBox2.Controls.Add(Me.Label29)
         Me.GroupBox2.Controls.Add(Me.Label28)
-        Me.GroupBox2.Controls.Add(Me.ShapeContainer1)
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.GroupBox2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.GroupBox2.Location = New System.Drawing.Point(565, 69)
@@ -862,65 +853,10 @@ Partial Class AIO
         Me.Label36.Text = "Ethereum Classic"
         '
         'ShapeContainer1
+
         '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(10, 16)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape9, Me.LineShape8, Me.LineShape7, Me.LineShape6, Me.LineShape5, Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(543, 142)
-        Me.ShapeContainer1.TabIndex = 9
-        Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape1
-        '
-        Me.LineShape1.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 16
-        Me.LineShape1.X2 = 16
-        Me.LineShape1.Y1 = 7
-        Me.LineShape1.Y2 = 18
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 148
-        Me.LineShape2.X2 = 148
-        Me.LineShape2.Y1 = 6
-        Me.LineShape2.Y2 = 17
-        '
-        'LineShape3
-        '
-        Me.LineShape3.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 254
-        Me.LineShape3.X2 = 254
-        Me.LineShape3.Y1 = 6
-        Me.LineShape3.Y2 = 17
-        '
-        'LineShape4
-        '
-        Me.LineShape4.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 365
-        Me.LineShape4.X2 = 365
-        Me.LineShape4.Y1 = 8
-        Me.LineShape4.Y2 = 19
-        '
-        'LineShape5
-        '
-        Me.LineShape5.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape5.Name = "LineShape5"
-        Me.LineShape5.X1 = 475
-        Me.LineShape5.X2 = 475
-        Me.LineShape5.Y1 = 8
-        Me.LineShape5.Y2 = 19
-        '
+
+
         'Label37
         '
         Me.Label37.AutoSize = True
@@ -932,44 +868,10 @@ Partial Class AIO
         Me.Label37.Text = "Yes"
         '
         'LineShape6
-        '
-        Me.LineShape6.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape6.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape6.Name = "LineShape6"
-        Me.LineShape6.X1 = 21
-        Me.LineShape6.X2 = 522
-        Me.LineShape6.Y1 = 52
-        Me.LineShape6.Y2 = 52
-        '
-        'LineShape7
-        '
-        Me.LineShape7.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape7.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape7.Name = "LineShape7"
-        Me.LineShape7.X1 = 21
-        Me.LineShape7.X2 = 525
-        Me.LineShape7.Y1 = 77
-        Me.LineShape7.Y2 = 78
+
         '
         'LineShape8
-        '
-        Me.LineShape8.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape8.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape8.Name = "LineShape8"
-        Me.LineShape8.X1 = 21
-        Me.LineShape8.X2 = 526
-        Me.LineShape8.Y1 = 106
-        Me.LineShape8.Y2 = 107
-        '
-        'LineShape9
-        '
-        Me.LineShape9.BorderColor = System.Drawing.SystemColors.AppWorkspace
-        Me.LineShape9.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
-        Me.LineShape9.Name = "LineShape9"
-        Me.LineShape9.X1 = 21
-        Me.LineShape9.X2 = 523
-        Me.LineShape9.Y1 = 132
-        Me.LineShape9.Y2 = 132
+
         '
         'Label38
         '
@@ -1345,16 +1247,6 @@ Partial Class AIO
     Friend WithEvents Label30 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label28 As Label
-    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
-    Friend WithEvents LineShape9 As PowerPacks.LineShape
-    Friend WithEvents LineShape8 As PowerPacks.LineShape
-    Friend WithEvents LineShape7 As PowerPacks.LineShape
-    Friend WithEvents LineShape6 As PowerPacks.LineShape
-    Friend WithEvents LineShape5 As PowerPacks.LineShape
-    Friend WithEvents LineShape4 As PowerPacks.LineShape
-    Friend WithEvents LineShape3 As PowerPacks.LineShape
-    Friend WithEvents LineShape2 As PowerPacks.LineShape
-    Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents GroupBox15 As GroupBox
     Friend WithEvents GroupBox16 As GroupBox
     Friend WithEvents Label53 As Label

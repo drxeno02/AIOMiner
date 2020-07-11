@@ -68,7 +68,7 @@ Partial Class Welcome
         Me.LinkLabel1.Size = New System.Drawing.Size(107, 13)
         Me.LinkLabel1.TabIndex = 9
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Https://aiominer.com"
+        Me.LinkLabel1.Text = pubshared.HOSTED_WEBSITE & ""
         '
         'PictureBox1
         '
@@ -98,7 +98,7 @@ Partial Class Welcome
         Me.Name = "Welcome"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AIOMiner Alpha 8"
-        Me.TopMost = True
+        Me.TopMost = False
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

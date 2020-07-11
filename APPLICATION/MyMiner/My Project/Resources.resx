@@ -118,20 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ethereumclassic_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ethereumclassic_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BitcoinGold-Icon-yelow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BitcoinGold-Icon-yelow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ubiq_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ubiq_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-wallet-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8-wallet-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AIO_RED_STOP1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AIO_RED_STOP1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monacoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\monacoin-logo-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo1_transparent_welcome_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1_transparent_welcome_81.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="azzz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\81.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +142,14 @@
   <data name="aio_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\aio_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_STOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\STOP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sumokoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sumokoin_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zcash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zcash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ETC2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ETC2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zcash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zcash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +169,11 @@
   <data name="AIO_RED" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AIO_RED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ETC2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ETC2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MrMiner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MrMiner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-swimming-pool-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8-swimming-pool-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="beecool" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\beecool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,9 +184,6 @@
   <data name="electroneum_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\electroneum_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo1_transparent_welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1_transparent_welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="trezarcoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trezarcoin_logo_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,20 +193,26 @@
   <data name="redx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bytecoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bytecoin_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="zencash_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\zencash-logo-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AIO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="feathercoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\feathercoin_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-video-card-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8-video-card-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="musicoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\musicoin_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-menu-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8-menu-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,14 +223,17 @@
   <data name="bitcoinz_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bitcoinz_logo_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-minimize-window-filled-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8-minimize-window-filled-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="expanse_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expanse_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="orbitcoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orbit_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MrMiner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MrMiner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ethereumclassic_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ethereumclassic_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zcash_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\zcash-logo-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,26 +253,35 @@
   <data name="halcyon_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\halcyon_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_STOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\STOP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ubiq_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ubiq_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="click_to_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click_to_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hamburger-menu-icon-svg-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\hamburger-menu-icon-svg-20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monero_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monero_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hush_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\hush-logo-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shovel_med" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Images\shovel_med.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo1_transparent_welcome_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo1_transparent_welcome_81.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ethereum_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\ethereum-logo-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bytecoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bytecoin_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo1_transparent_welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo1_transparent_welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exodus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exodus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="monero_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monero_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="feathercoin_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\feathercoin_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="straks_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\straks-logo-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,13 +289,25 @@
   <data name="vivo_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vivo_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-multiply-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8-multiply-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="metaverse_logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\metaverse_logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AIO_GREEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AIO_GREEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BitcoinGold-Icon-yelow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BitcoinGold-Icon-yelow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-services-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8-services-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zcash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zcash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shovel_med" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\shovel_med.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-circled-play-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8-circled-play-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

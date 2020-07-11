@@ -149,7 +149,6 @@ Partial Class UpdateSettings
         Me.Name = "UpdateSettings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "AIOMiner Update Settings"
-        Me.TopMost = True
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

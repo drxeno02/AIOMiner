@@ -147,5 +147,15 @@ Public Class PoolAdvanced
         Me.Close()
     End Sub
 
+    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

@@ -133,7 +133,6 @@ Partial Class Downloader
         Me.Name = "Downloader"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AIOMiner - Downloader"
-        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -66,7 +66,7 @@ Public Class Welcome
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Dim webAddress As String
-        webAddress = "https://aiominer.com"
+        webAddress = PubShared.HOSTED_WEBSITE & ""
         Process.Start(webAddress)
     End Sub
     '    Private Sub Welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -144,7 +144,7 @@ Partial Class About
         Me.Name = "About"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "About AIOMiner"
-        Me.TopMost = True
+        Me.TopMost = False
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

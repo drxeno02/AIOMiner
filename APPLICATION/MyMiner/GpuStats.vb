@@ -10,7 +10,7 @@ Public Class GpuStats
         'Check if you should be ontop
         Try
             If ReturnAIOsetting("ontop") = True Then
-                Me.TopMost = True
+                Me.TopMost = False
             Else
                 Me.TopMost = False
             End If

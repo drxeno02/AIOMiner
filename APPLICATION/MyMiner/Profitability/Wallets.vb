@@ -6,11 +6,11 @@
         Wallet = ""
 
         If Coin = "Ethereum" Then
-            Wallet = ""
+            Wallet = "0x1efccad435663a013a6dc4cc2d14ae5b93e69332"
         End If
 
         If Coin = "BitcoinZ" Then
-            Wallet = ""
+            Wallet = "t1dbq8sgJtHVFxq1tTFnZaHhSUQHqTUhUNs"
         End If
 
 

@@ -7,14 +7,14 @@
     <framework targetVersion="4.6" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="AIOminer.exe.manifest" size="11365">
+    <dependentAssembly dependencyType="install" codebase="AIOminer.exe.manifest" size="14603">
       <assemblyIdentity name="AIOminer.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>++l55ZG1g6Wk2uaKvWD1t51LeNvvI1DN1b1Z+9CAeAg=</dsig:DigestValue>
+        <dsig:DigestValue>j/Y/2TXXqKYE5ug8FtYWZxuPMkOUGmwDABuYaN2Joqw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

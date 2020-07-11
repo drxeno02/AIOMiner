@@ -16,14 +16,14 @@ Public Class Email
             Who = ReturnAIOsetting("email")
             Dim mail As New MailMessage()
             Dim MyMailMessage As New MailMessage With {
-                .From = New MailAddress("xxxxxx")
+                .From = New MailAddress("MyMinerAlerts@gmail.com")
             }
             MyMailMessage.To.Add(Who)
             MyMailMessage.Subject = "AIOMiner Notification!"
             MyMailMessage.Body = (What)
             Dim SMTPServer As New SmtpClient("smtp.gmail.com") With {
                 .Port = 587,
-                .Credentials = New NetworkCredential("xxxxxxx", xyzit()),
+                .Credentials = New NetworkCredential("MyMinerAlerts@gmail.com", xyzit()),
                 .EnableSsl = True
             }
             Try

@@ -129,7 +129,6 @@ Partial Class Autologin
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Autologin"
         Me.Text = "Autologin"
-        Me.TopMost = True
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()

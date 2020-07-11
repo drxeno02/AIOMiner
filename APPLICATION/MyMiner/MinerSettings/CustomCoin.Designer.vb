@@ -99,7 +99,6 @@ Partial Class CustomCoin
         Me.Name = "CustomCoin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "AIOMiner - New Custom Coin"
-        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

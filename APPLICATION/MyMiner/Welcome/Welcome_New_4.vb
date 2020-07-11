@@ -43,7 +43,7 @@ Public Class Welcome_New_4
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         Dim webAddress As String
-        webAddress = "https://discord.gg/vfj4m7F"
+        webAddress = PubShared.WEB_DISCORD_LINK
         Process.Start(webAddress)
     End Sub
 

@@ -400,7 +400,7 @@ Partial Class CoinSettings
         Me.Name = "CoinSettings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "AIOMiner -  Coin Settings"
-        Me.TopMost = True
+        Me.TopMost = False
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

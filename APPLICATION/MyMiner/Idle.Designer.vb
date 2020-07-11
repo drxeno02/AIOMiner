@@ -87,7 +87,6 @@ Partial Class Idle
         Me.Name = "Idle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "AIOMiner - Idle Settings"
-        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

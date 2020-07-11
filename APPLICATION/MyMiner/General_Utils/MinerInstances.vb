@@ -129,6 +129,13 @@ Public Class MinerInstances
                         'Kill any Monitoring
                         PubShared.monitoring = False
                         Downloading = True
+                        LogUpdate("Seems you are missing a miner, we are going to open up the downloader for you")
+                        Downloader.Show()
+                        Return Nothing
+
+
+
+
 
                         Dim ThingToDownload As MinerDownloadz = GetMinerJson()
                         'Find the directory's match up

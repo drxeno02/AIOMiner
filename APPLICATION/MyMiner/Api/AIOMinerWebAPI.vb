@@ -25,7 +25,7 @@ Public Class AIOMinerWebAPI
 
     Private Shared Function GetBaseApiUrl() As String
 
-        ' Return "http://216.189.153.248:5000/"
+
         Return ReturnAIOsetting("baseapiurl")
 
         ' todo:   setup for dynamic add to settings and apikey and rigname
@@ -45,6 +45,51 @@ Public Class AIOMinerWebAPI
 		Else
             Return PubShared.ApiKey
         End If
+    End Function
+
+    Public Shared Function checkPlanStatus() As Boolean
+        Dim baseuri As String = GetBaseApiUrl()
+        Dim responseText As String = ""
+        Dim retVal As Boolean = False
+
+        Try
+            Dim request As WebRequest = WebRequest.Create(baseuri & "api/info/" & PubShared.ApiKey)
+            request.Method = "GET"
+            Dim response As WebResponse = request.GetResponse()
+            Dim inputstream1 As Stream = response.GetResponseStream()
+            Dim reader As New StreamReader(inputstream1)
+            responseText = reader.ReadToEnd
+            inputstream1.Dispose()
+            reader.Close()
+            response.Dispose()
+
+
+            'Check if correct api key was given
+            If responseText.ToLower.Contains("email_verified") = True Then
+                'Correct API, see if it's a subscriber  
+                If responseText.ToLower.Contains("normie") = True Then
+                    'Not a paying user, show ad
+                    retVal = False
+                Else
+                    retVal = True
+                End If
+            Else
+                'No or incorrect API Key, show ad
+                PubShared.ShouldBeUpdatingToApi = False
+                retVal = False
+
+            End If
+
+        Catch ex As Exception
+            If ex IsNot Nothing AndAlso ex.Message IsNot Nothing AndAlso Not ex.Message.ToLower.Contains("unable to connect") Then
+                'Log.LogUpdate("Error on checking API online status!  Exception is: " & ex.Message)
+            End If
+            PubShared.ShouldBeUpdatingToApi = False
+            retVal = False
+        End Try
+
+        Return retVal
+
     End Function
 
     Private Shared Function genJobStatusHash(apikey As String, rigname As String) As String
@@ -87,7 +132,7 @@ Public Class AIOMinerWebAPI
 
         Catch ex As Exception
             If ex IsNot Nothing AndAlso ex.Message IsNot Nothing AndAlso Not ex.Message.ToLower.Contains("unable to connect") Then
-                Log.LogUpdate("Error on checking API online status!  Exception is: " & ex.Message)
+                ' Log.LogUpdate("Error on checking API online status!  Exception is: " & ex.Message)
             End If
 
             retVal = False
@@ -212,6 +257,8 @@ Public Class AIOMinerWebAPI
             End Try
 
 
+
+
             Try
                 If PubShared.GpuListView.Items.Count > 0 Then
                     'Check that API is online
@@ -234,6 +281,8 @@ Public Class AIOMinerWebAPI
                                         .temperature = li.SubItems(2).Text,
                                         .utilpercent = li.SubItems(3).Text
                                     }
+
+                                    'TEST
 
                                     gpuidtmp += 1
 
@@ -261,6 +310,10 @@ Public Class AIOMinerWebAPI
                                     .commandnext = "OK"
                                     .GPUs = myGpuStats.ToArray()
                                     .gpu_count = .GPUs.Length.ToString()
+                                    .aiover = PubShared.Version
+                                    .uptime = PubShared.uptime & ";" & PubShared.miner_uptime
+
+
 
 
                                 End With
@@ -293,7 +346,7 @@ Public Class AIOMinerWebAPI
                         Catch ex As Exception
 
                             If ex.Message.ToLower.Contains("actively refused") Then
-                                LogUpdate("Web API service endpoint for rigs updating appears down ")
+                                ' LogUpdate("Web API service endpoint for rigs updating appears down ")
                             End If
                         End Try
                     Catch ex As Exception
@@ -301,7 +354,7 @@ Public Class AIOMinerWebAPI
                     End Try
                 End If
             Catch ex As Exception
-                LogUpdate("GPU Stats - Failed to update API with gpu stats!  Exception: " & ex.Message)
+                '  LogUpdate("GPU Stats - Failed to update API with gpu stats!  Exception: " & ex.Message)
             End Try
         End If
 
@@ -340,7 +393,7 @@ Public Class AIOMinerWebAPI
                         Catch ex As Exception
 
                             If ex.Message.ToLower.Contains("actively refused") Then
-                                LogUpdate("Web API service endpoint for rigs get work appears down ")
+                                'LogUpdate("Web API service endpoint for rigs get work appears down ")
                             End If
                         End Try
                     Catch ex As Exception
@@ -348,7 +401,7 @@ Public Class AIOMinerWebAPI
                     End Try
                 End If
             Catch ex As Exception
-                LogUpdate("Get Rig Work - Failed to get work items!  Exception: " & ex.Message)
+                'LogUpdate("Get Rig Work - Failed to get work items!  Exception: " & ex.Message)
             End Try
             ' else   let user know they are banned
         End If

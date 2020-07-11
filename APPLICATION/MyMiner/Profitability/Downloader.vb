@@ -20,25 +20,24 @@ Public Class Downloader
     Private StillDownloading As Boolean = False
     Private completed As Boolean = False
 
+
     Private Sub Downloader_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        'Check Windows Defender
+        If PubShared.WindowsDefenderPassed <> True Then
+            MsgBox("Before Downloading Miners, Please whitelist your AIOMiner Folder.  Please click OK to open the system checks page.")
+            MinerSettings.Show()
+            Me.Close()
+            Exit Sub
+        End If
 
-		If PubShared.JustCheckingMiners = True Then
-			AddHandler My_BgWorkerDL.DoWork, AddressOf My_BgWorkerDL_DoWork
-			AddHandler My_BgWorkerDL.ProgressChanged, AddressOf My_BgWorkerDL_Progress
-			Downloader_Start()
-			Timer1.Start()
-		Else
-
-			'8.4 Check Miner Version, then update if needed before you kick off updates
-			Dim result As Integer = MessageBox.Show("You will need to go back and review your prefered miners after doing this! This will check for new miner applications and processes. Do you want to do this?", "WARNING", MessageBoxButtons.YesNo)
-
-
-			If result = DialogResult.No Then
-				MessageBox.Show("Nothing Changed")
-			ElseIf result = DialogResult.Yes Then
-
-				Label3.Text = "Status - Downloading Miners.json.."
+        If PubShared.JustCheckingMiners = True Then
+            AddHandler My_BgWorkerDL.DoWork, AddressOf My_BgWorkerDL_DoWork
+            AddHandler My_BgWorkerDL.ProgressChanged, AddressOf My_BgWorkerDL_Progress
+            Downloader_Start()
+            Timer1.Start()
+        Else
+            Label3.Text = "Status - Downloading Miners.json.."
 				Dim appPath As String = Application.StartupPath()
 				'Clear the pipes
 				If System.IO.File.Exists(appPath & "\Settings\Updates\Miners.json") Then
@@ -59,156 +58,177 @@ Public Class Downloader
 
 				Try
 
-                    Dim uri As System.Uri = New System.Uri("{{WEBSITE}}Miners.json")
-                    Dim DMJ As System.Net.WebClient = New System.Net.WebClient()
-                    Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\Miners.json")
-                    If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
-                        System.IO.Directory.CreateDirectory(fileInfo.Directory.FullName)
-                    End If
+					Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/Miners.json")
+					Dim DMJ As System.Net.WebClient = New System.Net.WebClient()
+					Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\Miners.json")
+					If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
+						System.IO.Directory.CreateDirectory(fileInfo.Directory.FullName)
+					End If
 
-                    AddHandler DMJ.DownloadProgressChanged, AddressOf DMJ_ProgressChanged
-                    AddHandler DMJ.DownloadFileCompleted, AddressOf DMJ_DownloadDataCompleted
+					AddHandler DMJ.DownloadProgressChanged, AddressOf DMJ_ProgressChanged
+					AddHandler DMJ.DownloadFileCompleted, AddressOf DMJ_DownloadDataCompleted
 
-                    DMJ.DownloadFileAsync(uri, appPath & "\Settings\Updates\Miners.json")
+					DMJ.DownloadFileAsync(uri, appPath & "\Settings\Updates\Miners.json")
 
-                Catch ex As Exception
-                    LogUpdate("Unable to download Miners.json!", eLogLevel.Err)
-                    Label3.Text = "Status: Status - Error downloading Miners.json"
+				Catch ex As Exception
+					LogUpdate("Unable to download Miners.json!", eLogLevel.Err)
+					Label3.Text = "Status: Status - Error downloading Miners.json"
 
-                End Try
-            End If
+				End Try
+			End If
 
 
-            'If PubShared.monitoring = True Then
-            '    LogUpdate("Unable to benchmark while mining, please stop mining first")
-            '    Exit Sub
-            '    Me.Close()
-            'End If
-        End If
+        'If PubShared.monitoring = True Then
+        '    LogUpdate("Unable to benchmark while mining, please stop mining first")
+        '    Exit Sub
+        '    Me.Close()
+        'End If
+
 
         'Update for miners
         If AIOMiner.TextBox1.Text.ToLower.Contains("miners") Then
-            AIOMiner.TextBox1.Visible = False
-            AIOMiner.TextBox2.Visible = False
+			AIOMiner.TextBox1.Visible = False
+			AIOMiner.TextBox2.Visible = False
+		End If
+
+
+
+
+
+
+	End Sub
+
+	Private Sub DMJ_ProgressChanged(ByVal sender As Object, ByVal e As DownloadProgressChangedEventArgs)
+
+
+		Dim bytesIn As Double = Double.Parse(e.BytesReceived.ToString())
+
+		Dim totalBytes As Double = Double.Parse(e.TotalBytesToReceive.ToString())
+
+		Dim percentage As Double = bytesIn / totalBytes * 100
+		'STATUS = "Downloading Files Now"
+		ProgressBar1.Value = Int32.Parse(Math.Truncate(percentage).ToString())
+
+
+	End Sub
+	Private Sub DMJ_DownloadDataCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
+        Dim appPath As String = Application.StartupPath()
+        If e.Error IsNot Nothing Then
+			LogUpdate("Unable to download Miners.json!", eLogLevel.Err)
+			Label3.Text = "Status: Error downloading Miners.json, try again or check with support!"
+			Timer1.Stop()
+			ProgressBar1.Value = 0
+			Exit Sub
+		End If
+
+        ProgressBar1.Value = 0
+        Label3.Text = "Status: Making a backup of MinerProcessInfo.json"
+
+        If System.IO.File.Exists(appPath & "\Settings\Miners.json") Then
+            System.IO.File.Move(appPath & "\Settings\Miners.json", appPath & "\Settings\Backups\Miners.json")
+        Else
+            Label3.Text = "Status: Somehow you didn't already have this file...no backup made..good luck bro!"
+            LogUpdate("User was missing Miners.json, no backup made", eLogLevel.Info)
         End If
 
 
-
-
-
-
-    End Sub
-
-    Private Sub DMJ_ProgressChanged(ByVal sender As Object, ByVal e As DownloadProgressChangedEventArgs)
-
-
-        Dim bytesIn As Double = Double.Parse(e.BytesReceived.ToString())
-
-        Dim totalBytes As Double = Double.Parse(e.TotalBytesToReceive.ToString())
-
-        Dim percentage As Double = bytesIn / totalBytes * 100
-        'STATUS = "Downloading Files Now"
-        ProgressBar1.Value = Int32.Parse(Math.Truncate(percentage).ToString())
-
-
-    End Sub
-    Private Sub DMJ_DownloadDataCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
-
-        If e.Error IsNot Nothing Then
-            LogUpdate("Unable to download Miners.json!", eLogLevel.Err)
-            Label3.Text = "Status: Error downloading Miners.json, try again or check with support!"
-            Timer1.Stop()
-            ProgressBar1.Value = 0
+        Label3.Text = "Status: Importing new Miners.json"
+        If System.IO.File.Exists(appPath & "\Settings\Updates\Miners.json") Then
+            System.IO.File.Move(appPath & "\Settings\Updates\Miners.json", appPath & "\Settings\Miners.json")
+        Else
+            Label3.Text = "Status: Critical error restoring this file..it's missing already?  try the download again"
+            LogUpdate("Critical error restoring Miners.json", eLogLevel.Err)
             Exit Sub
         End If
+
 
         ProgressBar1.Value = 0
 
-        Label3.Text = "Status: Downloading MinerProcessInfo.json"
-        Try
-            Dim appPath As String = Application.StartupPath()
-            Dim uri As System.Uri = New System.Uri("{{WEBSITE}}MinerProcessInfo.json")
-            Dim DMJ1 As System.Net.WebClient = New System.Net.WebClient()
-            Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\MinerProcessInfo.json")
-            If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
-                System.IO.Directory.CreateDirectory(fileInfo.Directory.FullName)
-            End If
+		Label3.Text = "Status: Downloading MinerProcessInfo.json"
+		Try
 
-            AddHandler DMJ1.DownloadProgressChanged, AddressOf DMJ_ProgressChanged
-            AddHandler DMJ1.DownloadFileCompleted, AddressOf DMJ1_DownloadDataCompleted
+            Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/MinerProcessInfo.json")
+			Dim DMJ1 As System.Net.WebClient = New System.Net.WebClient()
+			Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\MinerProcessInfo.json")
+			If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
+				System.IO.Directory.CreateDirectory(fileInfo.Directory.FullName)
+			End If
 
-            DMJ1.DownloadFileAsync(uri, appPath & "\Settings\Updates\MinerProcessInfo.json")
+			AddHandler DMJ1.DownloadProgressChanged, AddressOf DMJ_ProgressChanged
+			AddHandler DMJ1.DownloadFileCompleted, AddressOf DMJ1_DownloadDataCompleted
 
-        Catch ex As Exception
-            LogUpdate("Unable to download MinerProcessInfo.json!", eLogLevel.Err)
-            Label3.Text = "Status: Error downloading MinerProcessInfo.json"
-        End Try
-    End Sub
+			DMJ1.DownloadFileAsync(uri, appPath & "\Settings\Updates\MinerProcessInfo.json")
 
-    Private Sub DMJ1_DownloadDataCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
-        If e.Error IsNot Nothing Then
-            LogUpdate("Unable to download MinerProcessInfo.json!", eLogLevel.Err)
-            Label3.Text = "Status: Error downloading MinerProcessInfo.json!, try again or check with support!"
-            ProgressBar1.Value = 0
-            Exit Sub
-        End If
-        Try
+		Catch ex As Exception
+			LogUpdate("Unable to download MinerProcessInfo.json!", eLogLevel.Err)
+			Label3.Text = "Status: Error downloading MinerProcessInfo.json"
+		End Try
+	End Sub
 
-
-            ProgressBar1.Value = 0
-            Label3.Text = "Status: Making a backup of MinerProcessInfo.json"
-            Dim appPath As String = Application.StartupPath()
-            If System.IO.File.Exists(appPath & "\Settings\MinerProcessInfo.json") Then
-                System.IO.File.Move(appPath & "\Settings\MinerProcessInfo.json", appPath & "\Settings\Backups\MinerProcessInfo.json")
-            Else
-                Label3.Text = "Status: Somehow you didn't already have this file...no backup made..good luck bro!"
-                LogUpdate("User was missing MinerProcessInfo.json, no backup made", eLogLevel.Info)
-            End If
+	Private Sub DMJ1_DownloadDataCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
+		If e.Error IsNot Nothing Then
+			LogUpdate("Unable to download MinerProcessInfo.json!", eLogLevel.Err)
+			Label3.Text = "Status: Error downloading MinerProcessInfo.json!, try again or check with support!"
+			ProgressBar1.Value = 0
+			Exit Sub
+		End If
+		Try
 
 
-            Label3.Text = "Status: Importing new MinerProcessInfo.json"
-            If System.IO.File.Exists(appPath & "\Settings\Updates\MinerProcessInfo.json") Then
-                System.IO.File.Move(appPath & "\Settings\Updates\MinerProcessInfo.json", appPath & "\Settings\MinerProcessInfo.json")
-            Else
-                Label3.Text = "Status: Critical error restoring this file..it's missing already?  try the download again"
-                LogUpdate("Critical error restoring MinerProcessInfo.json", eLogLevel.Err)
-                Exit Sub
-            End If
-
-            AddHandler My_BgWorkerDL.DoWork, AddressOf My_BgWorkerDL_DoWork
-            AddHandler My_BgWorkerDL.ProgressChanged, AddressOf My_BgWorkerDL_Progress
+			ProgressBar1.Value = 0
+			Label3.Text = "Status: Making a backup of MinerProcessInfo.json"
+			Dim appPath As String = Application.StartupPath()
+			If System.IO.File.Exists(appPath & "\Settings\MinerProcessInfo.json") Then
+				System.IO.File.Move(appPath & "\Settings\MinerProcessInfo.json", appPath & "\Settings\Backups\MinerProcessInfo.json")
+			Else
+				Label3.Text = "Status: Somehow you didn't already have this file...no backup made..good luck bro!"
+				LogUpdate("User was missing MinerProcessInfo.json, no backup made", eLogLevel.Info)
+			End If
 
 
+			Label3.Text = "Status: Importing new MinerProcessInfo.json"
+			If System.IO.File.Exists(appPath & "\Settings\Updates\MinerProcessInfo.json") Then
+				System.IO.File.Move(appPath & "\Settings\Updates\MinerProcessInfo.json", appPath & "\Settings\MinerProcessInfo.json")
+			Else
+				Label3.Text = "Status: Critical error restoring this file..it's missing already?  try the download again"
+				LogUpdate("Critical error restoring MinerProcessInfo.json", eLogLevel.Err)
+				Exit Sub
+			End If
 
-
-            Downloader_Start()
-            Timer1.Start()
+			AddHandler My_BgWorkerDL.DoWork, AddressOf My_BgWorkerDL_DoWork
+			AddHandler My_BgWorkerDL.ProgressChanged, AddressOf My_BgWorkerDL_Progress
 
 
 
-        Catch ex As Exception
-            LogUpdate(ex.Message, eLogLevel.Err)
-            Label3.Text = "Status: Critical Error trying to adjust your Miners, please contact support ASAP."
-            Label3.Text = "Status: You can restore by taking files from ~\Settings\Backup and putting them into ~\Settings folder!"
-            Timer1.Stop()
-        End Try
-    End Sub
 
-    Public Sub Downloader_Start()
+			Downloader_Start()
+			Timer1.Start()
 
-        If My_BgWorkerDL Is Nothing Then My_BgWorkerDL = New BackgroundWorker
-        My_BgWorkerDL.WorkerSupportsCancellation = True
-        My_BgWorkerDL.WorkerReportsProgress = True
 
-        If Not My_BgWorkerDL.IsBusy Then
-            My_BgWorkerDL.RunWorkerAsync()
-        Else
-            My_BgWorkerDL.CancelAsync()
 
-        End If
+		Catch ex As Exception
+			LogUpdate(ex.Message, eLogLevel.Err)
+			Label3.Text = "Status: Critical Error trying to adjust your Miners, please contact support ASAP."
+			Label3.Text = "Status: You can restore by taking files from ~\Settings\Backup and putting them into ~\Settings folder!"
+			Timer1.Stop()
+		End Try
+	End Sub
 
-    End Sub
-    Private Sub My_BgWorkerDL_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs)
+	Public Sub Downloader_Start()
+
+		If My_BgWorkerDL Is Nothing Then My_BgWorkerDL = New BackgroundWorker
+		My_BgWorkerDL.WorkerSupportsCancellation = True
+		My_BgWorkerDL.WorkerReportsProgress = True
+
+		If Not My_BgWorkerDL.IsBusy Then
+			My_BgWorkerDL.RunWorkerAsync()
+		Else
+			My_BgWorkerDL.CancelAsync()
+
+		End If
+
+	End Sub
+	Private Sub My_BgWorkerDL_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs)
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
         Dim worker As BackgroundWorker = CType(sender, BackgroundWorker)
         Dim mpInfos As MinerProcInfos = GetMinerProcessInfoJson()
@@ -345,6 +365,8 @@ Public Class Downloader
 
                 Dim NewExtract As ArchiveFile = New ArchiveFile(Directory2 & FileName1)
                 NewExtract.Extract(Directory2, True)
+                NewExtract.Dispose()
+
             End If
 
         Catch ex As Exception
@@ -385,7 +407,7 @@ Public Class Downloader
                 Try
                     SetAllowUnsafeHeaderParsing20()
                     Dim VERResults As String
-                    Dim address As String = "{{WEBSITE}}minersversion.txt"
+                    Dim address As String = pubshared.HOSTED_DATA_STORE & "/aiominer/minersversion.txt"
                     Dim client As WebClient = New WebClient()
                     Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
                     VERResults = reader.ReadToEnd
@@ -413,9 +435,14 @@ Public Class Downloader
     End Sub
 
     Private Sub Downloader_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Timer1.Stop()
-        My_BgWorkerDL.CancelAsync()
+        Try
 
+
+            Timer1.Stop()
+            My_BgWorkerDL.CancelAsync()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

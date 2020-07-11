@@ -72,7 +72,7 @@ Partial Class GpuStats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(603, 347)
+        Me.ClientSize = New System.Drawing.Size(600, 353)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ListView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

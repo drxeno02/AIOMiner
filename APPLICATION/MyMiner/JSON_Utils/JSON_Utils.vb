@@ -106,8 +106,17 @@ Public Class JSON_Utils
             Dim AIOSet As mAIOS = JsonConvert.DeserializeObject(Of mAIOS)(readJFile(appPath & "\Settings\AIOSettings.json").ToString)
             Return AIOSet
         Catch ex As Exception
-            LogUpdate(ex.Message, eLogLevel.Err)
-            Throw
+            'LogUpdate(ex.Message, eLogLevel.Err)
+            'Throw
+            'Error has occured check for a backup of the file
+
+            If System.IO.File.Exists(appPath & "\Settings\Backups\AIOSettings.json") Then
+                'Purge old file
+                System.IO.File.Delete(appPath & "\Settings\AIOSettings.json")
+                System.IO.File.Move(appPath & "\Settings\Backups\AIOSettings.json", appPath & "\Settings\AIOSettings.json")
+                Dim AIOSet As mAIOS = JsonConvert.DeserializeObject(Of mAIOS)(readJFile(appPath & "\Settings\AIOSettings.json").ToString)
+                Return AIOSet
+            End If
         End Try
     End Function
 
@@ -168,6 +177,12 @@ Public Class JSON_Utils
                         i = i + 1
                     End Try
                 Loop
+                'Backup AIOSettings.json
+                Try
+                    System.IO.File.Copy(appPath & "\Settings\AIOSettings.json", appPath & "\Settings\Backups\AIOSettings.json", True)
+                Catch ex As Exception
+
+                End Try
                 Return ("added")
             Catch ex As Exception
                 LogUpdate(ex.Message, eLogLevel.Err)
