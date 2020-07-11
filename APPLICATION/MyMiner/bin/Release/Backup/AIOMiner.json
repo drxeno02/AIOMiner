@@ -1,1 +1,0 @@
-{"Pools":{"Coin":[{"type":"Ethereum","isdefault":"0","primary":"1","algo":"Ethash","pool":"Ethermine","ip":"us1-ethermine.org","port":"4444","altargument":"","worker":"0x1efccad435663a013a6dc4cc2d14ae5b93e69332","password":""}]}}
