@@ -89,7 +89,7 @@ Partial Class Backup
         Me.Name = "Backup"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "AIOMiner - Backup"
-        Me.TopMost = True
+        Me.TopMost = False
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

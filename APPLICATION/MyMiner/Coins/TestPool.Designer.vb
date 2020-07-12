@@ -153,7 +153,7 @@ Partial Class TestPool
         Me.Name = "TestPool"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "AIOMiner - TestPool"
-        Me.TopMost = True
+        Me.TopMost = False
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

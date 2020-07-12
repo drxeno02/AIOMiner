@@ -6,7 +6,7 @@ Imports AIOminer.General_Utils
 Public Class Schedule
     Private Sub Schedule_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RichTextBox1.Text = "Days are tied to your computer time.  Change will occur at 12:00:00~AM (Midnight).  You must have the Schedule enabled on the main application.  You must have at least one pool added of the coin type.  It will mine your primary pool for that coin. To mine the most profitable coin (according to WhatToMine.com) select ""Most Profitable"", if you have a pool setup we will swap over to it, if not we will go down the top 5.  If none are avaiable we won't change
-a damn thing..."
+        'a damn thing..."
 
 
 
@@ -91,6 +91,10 @@ a damn thing..."
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub DayView1_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

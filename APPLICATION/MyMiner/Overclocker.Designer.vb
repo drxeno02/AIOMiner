@@ -316,7 +316,6 @@ Partial Class Overclocker
         Me.Name = "Overclocker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AIOMiner - Video Card Review"
-        Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

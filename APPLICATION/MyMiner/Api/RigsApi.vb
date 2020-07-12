@@ -24,9 +24,11 @@ Public Class Rig
     Public Property apikey As String
     Public Property commandnext As String
 
-	Public Property selected_coin As String
+    Public Property selected_coin As String
+    Public Property aiover As String
+    Public Property uptime As String
 
-	<JsonProperty("ccm_list")>
+    <JsonProperty("ccm_list")>
     Public Property ccmlist As String()
 
     <JsonProperty("gpu_stats")>

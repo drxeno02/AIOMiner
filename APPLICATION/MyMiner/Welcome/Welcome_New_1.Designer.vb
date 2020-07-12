@@ -153,9 +153,9 @@ Partial Class Welcome_New_1
         '
         Me.PictureBox3.BackgroundImage = Global.AIOminer.My.Resources.Resources.BitcoinGold_Icon_yelow
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox3.Location = New System.Drawing.Point(332, 174)
+        Me.PictureBox3.Location = New System.Drawing.Point(332, 175)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(306, 325)
+        Me.PictureBox3.Size = New System.Drawing.Size(305, 324)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 8
         Me.PictureBox3.TabStop = False
@@ -184,7 +184,7 @@ Partial Class Welcome_New_1
         Me.Name = "Welcome_New_1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AIOMiner Alpha 8"
-        Me.TopMost = True
+        Me.TopMost = False
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()

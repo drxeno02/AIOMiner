@@ -11,8 +11,11 @@ Public Class Restart
 		ComboBox1.Items.Add("12 Hours")
 		ComboBox1.Items.Add("24 Hours")
 
-		'add options for restart rig combobox2
-		ComboBox2.Items.Add("12 Hours")
+        'add options for restart rig combobox2
+        ComboBox2.Items.Add("1 Hours")
+        ComboBox2.Items.Add("3 Hours")
+        ComboBox2.Items.Add("6 Hours")
+        ComboBox2.Items.Add("12 Hours")
 		ComboBox2.Items.Add("24 Hours")
 
 		If ReturnAIOsetting("restartrig") = "True" Then

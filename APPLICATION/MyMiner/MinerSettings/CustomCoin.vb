@@ -61,6 +61,11 @@ Public Class CustomCoin
             'PoolSettings.CoinRefresh()
             PubShared.newcoin = True
             MsgBox("Added your new coin!")
+            Try
+                PubShared.newcoinname = TextBox1.Text
+            Catch ex As Exception
+
+            End Try
             Me.Close()
 
         Catch ex As Exception

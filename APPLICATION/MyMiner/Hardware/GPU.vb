@@ -29,12 +29,27 @@ Public Class GPU
                 .StartInfo.CreateNoWindow = True
                 .StartInfo.UseShellExecute = False
                 .StartInfo.RedirectStandardOutput = True
-                .StartInfo.FileName = appPath + "\nvidia-smi.exe"
+                If System.IO.File.Exists("C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe") Then
+                    .StartInfo.FileName = "C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe"
+                Else
+                    .StartInfo.FileName = appPath + "\nvidia-smi.exe"
+                End If
                 .StartInfo.Arguments = args
                 .Start()
                 output = .StandardOutput.ReadToEnd
+                output = output.Replace("%", "")
+                output = output.Replace("[", "")
+                output = output.Replace("]", "")
+                output = output.Trim
+
             End With
-            Return output
+            Try
+
+
+                Return output
+            Catch ex As Exception
+
+            End Try
         Catch ex As Exception
             Return ex.Message
         End Try
@@ -154,6 +169,10 @@ Public Class GPU
 
     End Function
 
+    Shared Function GPU_UTILIZATION(DID As String) As String
+        Return GPU_Q_Proxy(DID, "utilization.gpu").Replace("%", "").Trim
+
+    End Function
     Shared Function GPU_POWERSTATE(DID As String) As String
         'Dim I As String
         ''Get the Memory Clock Speed

@@ -12,19 +12,24 @@ Public Class Log
     Public Shared Sub LogUpdate(Update As String, Optional ByVal Level As eLogLevel = eLogLevel.Info)
         Try
 
-
-            PubShared.LogsListbox.Items.Insert(0, Update & " " & DateAndTime.Now)
-
-            ' log to file with log4
-            If Level = eLogLevel.Info Then
-                PubShared.log4.Info(Update)
-            ElseIf Level = eLogLevel.Err Then
-                PubShared.log4.Error(Update)
-            ElseIf Level = eLogLevel.Debug Then
-                PubShared.log4.Debug(Update)
+            If PubShared.LogsListbox Is Nothing Then
             Else
-                PubShared.log4.Info(Update & "  <<unknown log level>>")
+
+
+                PubShared.LogsListbox.Items.Insert(0, Update & " " & DateAndTime.Now)
+
+                ' log to file with log4
+                If Level = eLogLevel.Info Then
+                    PubShared.log4.Info(Update)
+                ElseIf Level = eLogLevel.Err Then
+                    PubShared.log4.Error(Update)
+                ElseIf Level = eLogLevel.Debug Then
+                    PubShared.log4.Debug(Update)
+                Else
+                    PubShared.log4.Info(Update & "  <<unknown log level>>")
+                End If
             End If
+
         Catch ex As Exception
 
         End Try

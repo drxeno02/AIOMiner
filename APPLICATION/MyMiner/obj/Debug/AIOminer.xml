@@ -92,6 +92,11 @@ AIOminer
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:AIOminer.My.Resources.Resources.click_to_stop">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:AIOminer.My.Resources.Resources.electroneum_logo_1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -142,7 +147,52 @@ AIOminer
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:AIOminer.My.Resources.Resources.hamburger_menu_icon_svg_20">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:AIOminer.My.Resources.Resources.hush_logo_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AIOminer.My.Resources.Resources.icons8_circled_play_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AIOminer.My.Resources.Resources.icons8_menu_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AIOminer.My.Resources.Resources.icons8_minimize_window_filled_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AIOminer.My.Resources.Resources.icons8_multiply_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AIOminer.My.Resources.Resources.icons8_services_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AIOminer.My.Resources.Resources.icons8_swimming_pool_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AIOminer.My.Resources.Resources.icons8_video_card_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AIOminer.My.Resources.Resources.icons8_wallet_32">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

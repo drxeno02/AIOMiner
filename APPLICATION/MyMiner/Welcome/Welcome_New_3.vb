@@ -30,13 +30,13 @@ Public Class Welcome_New_3
 
         If Label3.Text = "Ethereum Classic" Then
             PubShared.worker = TextBox1.Text
-			PubShared.ip = "stratum+tcp://pool.aiominer.com"
-			PubShared.algo = "ethash"
+            PubShared.ip = "us1-etc.ethermine.org"
+            PubShared.algo = "ethash"
             PubShared.pool = "Ethash"
             PubShared.password = ""
             PubShared.coin = "Ethereum Classic"
-			PubShared.port = "8008"
-		Else
+            PubShared.port = "4444"
+        Else
 			PubShared.ip = "us-btg.2miners.com"
 			PubShared.port = "4040"
 			PubShared.worker = TextBox1.Text

@@ -9,17 +9,21 @@ Public Class whattomine_line
     Public Property Profit_Estimate As String
     Public Property Difficulty As String
     Public Property Profitzz As String
+    Public Property Profit_After_Power As String
 
 
 
-    Public Sub New(_Id As String, cName As String, algo As String, _poolsetup As String, _profitest As String, _diff As String, _profitzz As String)
+
+    Public Sub New(_Id As String, cName As String, algo As String, _poolsetup As String, _profitest As String, _other_profits As String, _diff As String, _profitzz As String)
         Id = _Id
         CoinName = cName
         Algorithm = algo
         Pool_Setup = _poolsetup
         Profit_Estimate = _profitest
+        Profit_After_Power = _other_profits
         Difficulty = _diff
         Profitzz = _profitzz
+
     End Sub
 
     Public Function toJSONString() As String

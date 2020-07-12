@@ -199,7 +199,7 @@
       },
       {
         "type": "baseapiurl",
-        "value": "{{API}}"
+        "value": "http://216.189.153.248:5000/"
       }
     ]
   }

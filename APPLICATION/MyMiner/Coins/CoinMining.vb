@@ -39,21 +39,21 @@ Public Class CoinMining
 			{"0", ReturnAIOsetting("sunday")}
 		 })(Today)
 
-			If ShouldBeMining = "Most Profitable" Then
-				Dim foundit As Boolean
-				For i = 0 To 4
-					If AIOMiner.ListView1.Items(i).SubItems(4).Text <> "" Then
-						ShouldBeMining = AIOMiner.ListView1.Items(i).SubItems(4).Text
-						foundit = True
-						Exit For
-					End If
-				Next
+            If ShouldBeMining = "Most Profitable" Then
+                Dim foundit As Boolean
+                For i = 0 To 4
+                    If AIOMiner.ListView1.Items(i).SubItems(4).Text <> "" Then
+                        ShouldBeMining = AIOMiner.ListView1.Items(i).SubItems(4).Text
+                        foundit = True
+                        Exit For
+                    End If
+                Next
 
-				If foundit = False Then
-					LogUpdate("We were unable to change your coin to mine, as we didn't find any pools setup for the top 5 coins!")
-					ShouldBeMining = AIOMiner.ComboBox1.Text
-				End If
-			End If
+                If foundit = False Then
+                    LogUpdate("We were unable to change your coin to mine, as we didn't find any pools setup for the top 5 coins!")
+                    ShouldBeMining = AIOMiner.ComboBox1.Text
+                End If
+            End If
 		Catch ex As Exception
 			LogUpdate(ex.Message, eLogLevel.Err)
 		End Try
@@ -247,10 +247,13 @@ Public Class CoinMining
 
 			Dim px As ProcessStartInfo = GetMinerProcessStartInfo(PubShared.nvidia, PubShared.amd, algo, pass, port, ip, worker, GPUSTOUSE)
 
-			If px Is Nothing Then
-				LogUpdate("Looks like you are missing a miner?  We are downloading it for you now...")
-				Exit Sub
-			End If
+            If px Is Nothing Then
+                'LogUpdate("Looks like you are missing a miner?  We are downloading it for you now...")
+                PubShared.MinerMissing = True
+                Exit Sub
+            Else
+                PubShared.MinerMissing = False
+            End If
 
 			If GetArgs Then
 				PubShared.currentargs = px.Arguments
@@ -319,26 +322,38 @@ Public Class CoinMining
 				End If
 
 
-				px.WorkingDirectory = PubShared.WorkingDirectory
-				'px.RedirectStandardOutput = True
-				'px.RedirectStandardError = True
-				'px.UseShellExecute = False
+                px.WorkingDirectory = PubShared.WorkingDirectory
+                If PubShared.DebugMining = True Then
+                    Dim shittorun As String = """" & px.FileName.ToString & """" & " " & px.Arguments.ToString
+                    ' Create a mother fucking batch file
+                    Dim sb As New System.Text.StringBuilder
+                    sb.AppendLine("@echo off")
+                    sb.AppendLine("cls()")
+                    sb.AppendLine(": begin()")
+                    sb.AppendLine("echo ::::: AIOMINER - DEBUG MODE ENABLED :::::")
+                    sb.AppendLine(shittorun)
+                    sb.AppendLine("echo ::::: AIOMINER - Please close this window when you are done seeing why your gpu's hate you :::::")
+                    sb.AppendLine("pause")
 
-				'px.WindowStyle = ProcessWindowStyle.Hidden
+                    IO.File.WriteAllText(appPath + "\Miners\debugTest.bat", sb.ToString())
 
-				minerProcess = Process.Start(px)
-				MinerInstances.RunningMiners.Add(minerProcess)
-				'minerProcess.BeginOutputReadLine()
-				'minerProcess.BeginErrorReadLine()
-				'AddHandler minerProcess.OutputDataReceived, AddressOf proc_OutputDataReceived
-				'process.StandardOutput.ReadToEnd().Split("\n\r".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-				'MinerProcess.WaitForExit()
+                    Process.Start(appPath + "\Miners\debugTest.bat")
+                Else
+                    'px.RedirectStandardOutput = True
+                    'px.RedirectStandardError = True
+                    px.UseShellExecute = False
+                    minerProcess = Process.Start(px)
+
+                    MinerInstances.RunningMiners.Add(minerProcess)
+
+                End If
 
 
 
-			End If
 
-		Catch ex As Exception
+            End If
+
+        Catch ex As Exception
 			LogUpdate(ex.Message, eLogLevel.Err)
 			AIOMiner.Button1.Text = "Start"
 			AIOMiner.Button1.BackgroundImage = My.Resources.Resources.START
@@ -518,9 +533,16 @@ Public Class CoinMining
 						sndx = 0
 						endx = c16.IndexOf("<br>")   ' c16.IndexOf("</strong>") - 1
 
-						Dim profit As String = c16.Substring(sndx, endx - sndx).Replace(vbLf, "").Trim
+                        Dim endxx As Integer
+                        endxx = c16.IndexOf("</strong>")
 
-						Try
+                        Dim profit As String = c16.Substring(sndx, endx - sndx).Replace(vbLf, "").Trim
+                        Dim other_profit As String = c16.Substring(endx, endxx - endx).Replace(vbLf, "").Trim
+                        other_profit = other_profit.Replace("<br><strong>", "").Trim
+
+
+                        'Dim profit2 As String = c16.Substring()
+                        Try
 
 
 							'pool setup value
@@ -531,13 +553,13 @@ Public Class CoinMining
 							' determine profitzzzzzzz
 							Dim profitzz As String = IIf(pSetup = "Yes", cnameshort, "")
 
-							' add a new line to whattomine collection
-							Dim wLine As whattomine_line = New whattomine_line(CStr(rowcnt), cname, algotxt, pSetup, profit, difficulty, profitzz)
-							wLines.Add(wLine)
+                            ' add a new line to whattomine collection
+                            Dim wLine As whattomine_line = New whattomine_line(CStr(rowcnt), cname, algotxt, pSetup, profit, other_profit, difficulty, profitzz)
+                            wLines.Add(wLine)
 							rowcnt += 1
 
-							If rowcnt > 10 Then Exit For
-						Catch ex As Exception
+                            If rowcnt > 5 Then Exit For
+                        Catch ex As Exception
 							LogUpdate(ex.Message, eLogLevel.Err)
 						End Try
 
@@ -549,9 +571,8 @@ Public Class CoinMining
 
 
 		Catch ex As Exception
-			Dim tt As String = ex.Message
-
-		End Try
+            LogUpdate(ex.Message, eLogLevel.Err)
+        End Try
 
 		Try
 
@@ -560,16 +581,16 @@ Public Class CoinMining
 			For i As Short = 0 To 9
 				Try
 					Dim wline As whattomine_line = wLines.Item(i)
-					rtnList.Add(New ListViewItem(New String() {CStr(i + 1), wline.CoinName, wline.Pool_Setup, wline.Profit_Estimate, wline.Profitzz}))
-				Catch ex As Exception
+                    rtnList.Add(New ListViewItem(New String() {CStr(i + 1), wline.CoinName, wline.Pool_Setup, wline.Profit_Estimate, wline.Profit_After_Power, wline.Profitzz}))
+                Catch ex As Exception
 					Exit For
 				End Try
 
 			Next
 
 		Catch ex As Exception
-
-		End Try
+            LogUpdate(ex.Message, eLogLevel.Err)
+        End Try
 
 		Return rtnList
 

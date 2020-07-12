@@ -24,25 +24,32 @@ Public Class MinerStopped
     Private Sub MinerStopped_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
+        If PubShared.Subscriber = True Then
+            LinkLabel1.Visible = False
+            PictureBox1.Image = My.Resources.Resources.click_to_stop
 
+
+        Else
+            Try
+                Dim MyWebClient As New System.Net.WebClient
+                Dim ImageInBytes() As Byte = MyWebClient.DownloadData(pubshared.HOSTED_DATA_STORE & "/aiominer/release/advertiseaio2.png")
+                Dim ImageStream As New IO.MemoryStream(ImageInBytes)
+                PictureBox1.Image = New System.Drawing.Bitmap(ImageStream)
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                Dim MyWebClient As New System.Net.WebClient
+                Dim ImageInBytes() As Byte = MyWebClient.DownloadData(pubshared.HOSTED_WEBSITE & "/img/logo/dot.png")
+                Dim ImageStream As New IO.MemoryStream(ImageInBytes)
+                PictureBox2.Image = New System.Drawing.Bitmap(ImageStream)
+            Catch ex As Exception
+
+            End Try
+        End If
         'Advertisements
-        Try
-            Dim MyWebClient As New System.Net.WebClient
-            Dim ImageInBytes() As Byte = MyWebClient.DownloadData("{{WEBSITE}}release/advertiseaio2.png")
-            Dim ImageStream As New IO.MemoryStream(ImageInBytes)
-            PictureBox1.Image = New System.Drawing.Bitmap(ImageStream)
-        Catch ex As Exception
 
-        End Try
-
-        Try
-            Dim MyWebClient As New System.Net.WebClient
-            Dim ImageInBytes() As Byte = MyWebClient.DownloadData("https://aiominer.com/img/logo/dot.png")
-            Dim ImageStream As New IO.MemoryStream(ImageInBytes)
-            PictureBox2.Image = New System.Drawing.Bitmap(ImageStream)
-        Catch ex As Exception
-
-        End Try
 
 
         AIOMiner.Label14.Text = "Changing Coin!"
@@ -60,6 +67,7 @@ Public Class MinerStopped
         PubShared.pool = ""
         PubShared.ip = ""
         PubShared.port = ""
+
 
 
 
@@ -91,25 +99,25 @@ Public Class MinerStopped
 
         'AS U SEE, NO FILE NEEDS TO BE WRITTEN TO THE HARD DRIVE, ITS ALL DONE IN MEMORY
 
+
+
+        Try
+
+
+            '..f'n claymore
+            KillAllMiningApps()
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            '..f'n claymore
+            KillAllMiningApps()
+        Catch ex As Exception
+
+        End Try
+
         Timer1.Start()
-
-
-        Try
-
-
-            '..f'n claymore
-            KillAllMiningApps()
-        Catch ex As Exception
-
-        End Try
-
-        Try
-            '..f'n claymore
-            KillAllMiningApps()
-        Catch ex As Exception
-
-        End Try
-
 
 
 
@@ -162,7 +170,7 @@ Public Class MinerStopped
         Dim Results As String
         Try
             SetAllowUnsafeHeaderParsing20()
-            Dim address As String = "https://aiominer.com/products/adclick2.html"
+            Dim address As String = pubshared.HOSTED_WEBSITE & "/products/adclick2.html"
             Dim client As WebClient = New WebClient()
             Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
             Results = reader.ReadToEnd

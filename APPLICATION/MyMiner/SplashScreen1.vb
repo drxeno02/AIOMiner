@@ -11,9 +11,10 @@ Imports System.Drawing.Drawing2D
 
 Public NotInheritable Class SplashScreen1
 
-
+    Private CHECKING_API As Boolean = False
     'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
     '  of the Project Designer ("Properties" under the "Project" menu).
+
 
     Private Sub MainForm_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles Me.Paint
 
@@ -25,79 +26,52 @@ Public NotInheritable Class SplashScreen1
         e.Graphics.FillRectangle(Gradient_Brush, BaseRectangle)
 
     End Sub
+
+
     Private Sub SplashScreen1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-		PubShared.Version = "a8.4.0"
-		PubShared.aioLoading = True
-        Ver.Text = PubShared.Version
-
         'Check for previous instance
+        Control.CheckForIllegalCrossThreadCalls = False
+
         If Process.GetProcessesByName(Process.GetCurrentProcess.ProcessName).Length > 1 Then
-            CreateObject("WScript.Shell").Popup("We found AIOMiner is already running, silly rabbit!  This will close by the time you finish reading this..maybe...who knows how fast you can read?  It was the summer of 1999 and it was a day like any other.  the end. good luck buddy, also the konami code is in the help about section.  try it out!", 3, "AIOMiner Dupe")
+            CreateObject("WScript.Shell").Popup("AIOMiner Already Running.  The Konami code, use it on the help screen", 3, "AIOMiner Dupe")
             Application.Exit()
         End If
 
-
-
-        Label1.Text = "Loading..."
-        'Get list of video cards
-        Dim GraphicsCardName As String
-        Dim i As Int64
-        Dim found As Boolean = False
-
+        'Check the status of settings.json
+        Dim appPath As String = Application.StartupPath()
 
         Try
-            i = 0
-            Dim WmiSelect As New ManagementObjectSearcher("SELECT * FROM Win32_VideoController")
-            For Each WmiResults As ManagementObject In WmiSelect.Get()
-                GraphicsCardName = WmiResults.GetPropertyValue("Name").ToString
-                'Get the lits of NVIDIA CARDS
-                If GraphicsCardName.ToString.ToUpper.Contains("NVIDIA") Then
-                    found = True
-					Label1.Text = "Team Green it would seem!"
-					PubShared.nvidia = True
+            If System.IO.File.Exists(appPath & "\Settings\Backups\AIOSettings.json") Then
+                'Purge old file
+                System.IO.File.Delete(appPath & "\Settings\AIOSettings.json")
+                System.IO.File.Copy(appPath & "\Settings\Backups\AIOSettings.json", appPath & "\Settings\AIOSettings.json")
+                'System.IO.File.Copy(appPath & "\Settings\AIOSettings.json", appPath & "\Backups\AIOSettings.json")
+            End If
+        Catch ex As Exception
 
-                    If Timer1.Interval = 2000 Then
-                    Else
-                        Timer1.Interval = 2000
-                        Timer1.Start()
-						Label1.Text = "Checking under the bed for pirates!"
-					End If
-
-
-                End If
-                'Get the list of AMD CARDS
-                If GraphicsCardName.ToString.ToUpper.Contains("RADEON") Then
-                    found = True
-					Label1.Text = "Team Red it would seem!"
-					PubShared.amd = True
-
-                    If Timer1.Interval = 2000 Then
-                    Else
-                        Timer1.Interval = 2000
-                        Timer1.Start()
-						Label1.Text = "Checking under the bed for pirates!"
-					End If
-
-                End If
-            Next
-
-            If Timer1.Interval = 2000 Then
-            Else
-                Timer1.Interval = 2000
-                Timer1.Start()
-				Label1.Text = "Checking under the bed for pirates!"
-			End If
-
-
-            'Disable on DEV box (temp)
-            'If found = False Then
-            '    MsgBox("We are unable to find an NVIDIA/AMD device.  Plesae confirm one is installed.  Closing now!")
-            '    End
-            'End If
-
-        Catch err As ManagementException
         End Try
+
+        PubShared.Version = "07.11.2020"
+        PubShared.aioLoading = True
+        Ver.Text = PubShared.Version
+
+        APICheck.Start()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     End Sub
 
@@ -109,75 +83,103 @@ Public NotInheritable Class SplashScreen1
         e.Graphics.FillRectangle(Gradient_Brush, BaseRectangle)
     End Sub
 
-    Private Sub SplashScreen1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
 
-    End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
+        Try
 
-        Dim appPath As String = Application.StartupPath()
-        If System.IO.File.Exists(appPath & "\Settings\MinerProcessInfo.json") Then
-            Label1.Text = "Found your MinerProcessInfo file, looking good!"
-			'####################ADD NEW SETTINGS HERE#######################
-			Try
-				'8.2.1 - Added Miner Versions
-				If AddNewSettings("minerversion", "0.0.0.1") = "added" Then
-					Label1.Text = "Checking under the bed for monsters!"
-				End If
-				'8.2.1 - Adding donation setting
-				If AddNewSettings("donation", "No Thanks") = "added" Then
-					Label1.Text = "Checking under the bed for monsters!"
-				End If
-				'8.2.2 - Adding restartrig
-				If AddNewSettings("restartrig", "False") = "added" Then
-					Label1.Text = "Checking under the bed for monsters!"
-				End If
-				If AddNewSettings("restartrigtime", "999999") = "added" Then
-					Label1.Text = "Checking under the bed for monsters!"
-				End If
-				'8.2.2 - Adding restart mining
-				If AddNewSettings("restartmining", "False") = "added" Then
-					Label1.Text = "Checking under the bed for monsters!"
-				End If
-				If AddNewSettings("restartminingtime", "999999") = "added" Then
-					Label1.Text = "Checking under the bed for monsters!"
-				End If
+
+                APICheck.Stop()
+            Catch ex As Exception
+
+            End Try
+
+            'Health check 
+            Dim appPath As String = Application.StartupPath()
+            If System.IO.File.Exists(appPath & "\Settings\MinerProcessInfo.json") Then
+                Label1.Text = "Found your MinerProcessInfo file, looking good!"
+                '####################ADD NEW SETTINGS HERE#######################
+                Try
+                    '8.2.1 - Added Miner Versions
+                    If AddNewSettings("minerversion", "0.0.0.1") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+                    '8.2.1 - Adding donation setting
+                    If AddNewSettings("donation", "No Thanks") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+                    '8.2.2 - Adding restartrig
+                    If AddNewSettings("restartrig", "False") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+                    If AddNewSettings("restartrigtime", "999999") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+                    '8.2.2 - Adding restart mining
+                    If AddNewSettings("restartmining", "False") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+                    If AddNewSettings("restartminingtime", "999999") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
                 '8.4.0
-                If AddNewSettings("baseapiurl", "{{API_SITE}}") = "added" Then
+                If AddNewSettings("baseapiurl", PubShared.API_LOCATION) = "added" Then
                     Label1.Text = "Checking under the bed for monsters!"
                 End If
                 If AddNewSettings("apikey", "") = "added" Then
-                    Label1.Text = "Checking under the bed for monsters!"
-                End If
-                If AddNewSettings("rigname", "") = "added" Then
-                    Label1.Text = "Checking under the bed for monsters!"
-                End If
-                If AddNewSettings("apienabled", "False") = "added" Then
-                    Label1.Text = "Checking under the bed for monsters!"
-                End If
-                If AddNewSettings("dontaskwebsite", "False") = "added" Then
-                    Label1.Text = "Checking under the bed for monsters!"
-                End If
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+                    If AddNewSettings("rigname", "") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+                    If AddNewSettings("apienabled", "False") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+                    If AddNewSettings("dontaskwebsite", "False") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+
+                    '8.6.0
+                    If AddNewSettings("powercosts", "0.10") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+
+                    If AddNewSettings("systemsettings", "") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+
+                    If AddNewSettings("WhatToMineUpdate", "1400") = "added" Then
+                        Label1.Text = "Checking under the bed for monsters!"
+                    End If
+
+                    Try
+                        Dim x As String = appPath
+                        Dim y As String = "powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath " & x
+                        'Windows Defender Whitelist Test
+                        Shell("powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath " & appPath)
+                    Catch ex As Exception
+
+                    End Try
+
+                Catch ex As Exception
+                    LogUpdate("Fatal Error adding New settings, possible corrupt settings file", eLogLevel.Err)
+                End Try
+                '#################### END NEW SETTINGS HERE #######################
 
 
 
-            Catch ex As Exception
-                LogUpdate("Fatal Error adding New settings, possible corrupt settings file", eLogLevel.Err)
-            End Try
-            '#################### END NEW SETTINGS HERE #######################
 
 
+                Timer2.Start()
+                Timer1.Stop()
+            Else
+                Timer1.Stop()
+                MsgBox("Unable to find your MinerProcessInfo.json, we kinda needs this")
+                Exit Sub
+            End If
 
 
-
-            Timer2.Start()
-            Timer1.Stop()
-        Else
-            Timer1.Stop()
-            MsgBox("Unable to find your MinerProcessInfo.json, we kinda needs this")
-            Exit Sub
-        End If
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -186,7 +188,7 @@ Public NotInheritable Class SplashScreen1
             Label1.Text = "Found your Miners file, looking good!"
 
             If ReturnAIOsetting("updatecheck") = "True" Then
-                Label1.Text = "Checking for New coins Or large hot tubs!"
+                Label1.Text = "Checking Subscription Status!"
                 Timer3.Start()
                 Timer2.Stop()
             Else
@@ -210,7 +212,7 @@ Public NotInheritable Class SplashScreen1
                 System.IO.File.Delete(appPath & "\Settings\Updates\AIOMiner_Default.json")
             End If
 
-            Dim uri As System.Uri = New System.Uri("{{WEBSITE}}AIOMiner_Default.json")
+            Dim uri As System.Uri = New System.Uri(PubShared.WEB_DEFAULT_COINS_POOLS_JSON)
             Dim webclient As System.Net.WebClient = New System.Net.WebClient()
 
 
@@ -328,6 +330,128 @@ Public NotInheritable Class SplashScreen1
 	'End Sub
 
 	Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub APICheck_Tick(sender As Object, e As EventArgs) Handles APICheck.Tick
+        If CHECKING_API = True Then
+        Else
+            CHECKING_API = True
+            Try
+
+                If ReturnAIOsetting("apienabled") = "True" Then
+                    Label1.Text = "API Enabled, Waiting for network stack..."
+                    Dim ping As New System.Net.NetworkInformation.Ping
+                    For i = 2 To 100
+
+                        Try
+                            Label1.Refresh()
+                            i = i - 1
+
+                            Label1.Text = "API Enabled, Checking Network " & (i).ToString & "/100"
+                            Dim request As WebRequest = WebRequest.Create(PubShared.API_LOCATION)
+                            request.Timeout = 5000
+                            request.Method = "GET"
+                            Dim response As WebResponse = request.GetResponse()
+                            Dim inputstream1 As Stream = response.GetResponseStream()
+                            Dim reader As New StreamReader(inputstream1)
+                            Dim workspace As String = reader.ReadToEnd
+                            inputstream1.Dispose()
+                            reader.Close()
+                            If workspace.Contains("OK!") Then
+                                Label1.Text = "AIOMiner API is online!"
+                                Exit For
+                            Else
+                                'Fuck you Sr. <3 u
+
+                            End If
+                        Catch ex As Exception
+                            ' Application.DoEvents()
+                            Threading.Thread.Sleep(3000)
+
+                        End Try
+                        i += 1
+
+                    Next
+
+                End If
+
+
+
+                Try
+
+
+                    Dim i As Integer = 0
+
+                    Label1.Text = "Loading..."
+                    'Get list of video cards
+                    Dim GraphicsCardName As String
+                    'Dim i As Int64
+                    Dim found As Boolean = False
+
+
+                    Dim WmiSelect As New ManagementObjectSearcher("SELECT * FROM Win32_VideoController")
+                    For Each WmiResults As ManagementObject In WmiSelect.Get()
+                        GraphicsCardName = WmiResults.GetPropertyValue("Name").ToString
+                        'Get the lits of NVIDIA CARDS
+                        If GraphicsCardName.ToString.ToUpper.Contains("NVIDIA") Then
+                            found = True
+                            Label1.Text = "Team Green it would seem!"
+                            PubShared.nvidia = True
+
+                            If Timer1.Interval = 2000 Then
+                            Else
+                                Timer1.Interval = 2000
+                                Timer1.Start()
+                                APICheck.Stop()
+
+
+                                Label1.Text = "Don't look up..."
+                            End If
+
+
+                        End If
+                        'Get the list of AMD CARDS
+                        If GraphicsCardName.ToString.ToUpper.Contains("RADEON") Then
+                            found = True
+                            Label1.Text = "Team Red it would seem!"
+                            PubShared.amd = True
+
+                            If Timer1.Interval = 2000 Then
+                            Else
+                                Timer1.Interval = 2000
+                                Timer1.Start()
+                                APICheck.Stop()
+                                Label1.Text = "Don't look up..."
+                            End If
+
+                        End If
+                    Next
+
+                    If Timer1.Interval = 2000 Then
+                    Else
+                        Timer1.Interval = 2000
+                        Timer1.Start()
+                        APICheck.Stop()
+
+                        Label1.Text = "Don't look up..."
+                    End If
+
+                Catch err As Exception
+                End Try
+
+
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub DetailsLayoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles DetailsLayoutPanel.Paint
 
     End Sub
 End Class

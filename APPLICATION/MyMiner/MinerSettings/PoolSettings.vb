@@ -773,6 +773,8 @@ Public Class PoolSettings
     Private Sub PoolSettings_Activated(sender As Object, e As EventArgs) Handles Me.Activated
 
 
+
+
         If PubShared.newcoin = True Then
             CoinRefresh()
             PubShared.newcoin = False
@@ -822,12 +824,13 @@ Public Class PoolSettings
         If coinname.Contains("*") Then
             coinname = coinname.Replace("*", "")
         End If
-        Process.Start("{{WIKI_SITE}}index.php/" & coinname)
+        Process.Start(PubShared.WEB_WIKI_LINK_MINER_UPDATES & coinname)
 
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        Process.Start("{{WIKI_SITE}}index.php/PoolSettings")
+        Process.Start(PubShared.WEB_WIKI_LINK_MINER_UPDATES)
+
 
     End Sub
 

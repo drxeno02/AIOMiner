@@ -88,7 +88,6 @@ Partial Class StartOnBoot
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "StartOnBoot"
         Me.Text = "StartOnBoot"
-        Me.TopMost = True
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

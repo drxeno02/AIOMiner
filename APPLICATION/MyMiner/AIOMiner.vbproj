@@ -81,27 +81,42 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Calendar.DayView, Version=2.2.9.280, Culture=neutral, PublicKeyToken=d5080d437467605c, processorArchitecture=MSIL">
+      <HintPath>..\packages\DayView.2.2.9\lib\net4\Calendar.DayView.dll</HintPath>
+    </Reference>
+    <Reference Include="DDay.iCal, Version=1.0.2.575, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DDay.iCal.1.0.2.575\lib\DDay.iCal.dll</HintPath>
+    </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.7.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.7.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="Galactic.Configuration, Version=1.3.0.499, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Galactic.Configuration.1.3.0.499\lib\Galactic.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Galactic.Cryptography, Version=1.3.0.499, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Galactic.Cryptography.1.3.0.499\lib\Galactic.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Galactic.EventLog, Version=1.3.0.499, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Galactic.EventLog.1.3.0.499\lib\Galactic.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Galactic.FileSystem, Version=1.3.0.499, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Galactic.FileSystem.1.3.0.499\lib\Galactic.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.10.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.10\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OpenHardwareMonitorLib, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenHardwareMonitor.0.7.1\lib\net40\OpenHardwareMonitorLib.dll</HintPath>
@@ -116,10 +131,15 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Management.Instrumentation" />
     <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
@@ -154,6 +174,12 @@
     <Compile Include="Api\DoWorkForApiRequest.vb" />
     <Compile Include="Api\RigsApi.vb" />
     <Compile Include="Api\RigsWork.vb" />
+    <Compile Include="Coins\APITester.Designer.vb">
+      <DependentUpon>APITester.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Coins\APITester.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DonateForm.Designer.vb">
       <DependentUpon>DonateForm.vb</DependentUpon>
     </Compile>
@@ -179,6 +205,12 @@
     <Compile Include="MinerSettings\NewCoins.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MinerSettings\PoolDualMine.Designer.vb">
+      <DependentUpon>PoolDualMine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinerSettings\PoolDualMine.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MinerSettings\TimerSettings.vb" />
     <Compile Include="MiningFrm.Designer.vb">
       <DependentUpon>MiningFrm.vb</DependentUpon>
@@ -194,6 +226,30 @@
       <DependentUpon>NewAPI.vb</DependentUpon>
     </Compile>
     <Compile Include="NewAPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\AddMiner.Designer.vb">
+      <DependentUpon>AddMiner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\AddMiner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\Debug.Designer.vb">
+      <DependentUpon>Debug.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\Debug.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\Downloader2.Designer.vb">
+      <DependentUpon>Downloader2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\Downloader2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinerSettings.Designer.vb">
+      <DependentUpon>MinerSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinerSettings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ThirdParty.Designer.vb">
@@ -365,6 +421,24 @@
     <Compile Include="UpdateSettings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Updates\AIOMinerUpdates.Designer.vb">
+      <DependentUpon>AIOMinerUpdates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Updates\AIOMinerUpdates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Updates\MinerUpdates.Designer.vb">
+      <DependentUpon>MinerUpdates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Updates\MinerUpdates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wallets\Wallets.Designer.vb">
+      <DependentUpon>Wallets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wallets\Wallets.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Welcome\Welcome.Designer.vb">
       <DependentUpon>Welcome.vb</DependentUpon>
     </Compile>
@@ -413,6 +487,9 @@
     <EmbeddedResource Include="AIO.resx">
       <DependentUpon>AIO.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Coins\APITester.resx">
+      <DependentUpon>APITester.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DonateForm.resx">
       <DependentUpon>DonateForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -422,14 +499,29 @@
     <EmbeddedResource Include="GpuStats.resx">
       <DependentUpon>GpuStats.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MinerSettings.resx">
+      <DependentUpon>MinerSettings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MinerSettings\NewCoins.resx">
       <DependentUpon>NewCoins.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinerSettings\PoolDualMine.resx">
+      <DependentUpon>PoolDualMine.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MiningFrm.resx">
       <DependentUpon>MiningFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAPI.resx">
       <DependentUpon>NewAPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\AddMiner.resx">
+      <DependentUpon>AddMiner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\Debug.resx">
+      <DependentUpon>Debug.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\Downloader2.resx">
+      <DependentUpon>Downloader2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThirdParty.resx">
       <DependentUpon>ThirdParty.vb</DependentUpon>
@@ -508,6 +600,15 @@
     <EmbeddedResource Include="UpdateSettings.resx">
       <DependentUpon>UpdateSettings.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Updates\AIOMinerUpdates.resx">
+      <DependentUpon>AIOMinerUpdates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Updates\MinerUpdates.resx">
+      <DependentUpon>MinerUpdates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wallets\Wallets.resx">
+      <DependentUpon>Wallets.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome\Welcome.resx">
       <DependentUpon>Welcome.vb</DependentUpon>
     </EmbeddedResource>
@@ -563,6 +664,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AIO.ico" />
+    <None Include="images\hamburger-menu-icon-svg-20.jpg" />
+    <None Include="images\icons8-minimize-window-filled-32.png" />
+    <None Include="images\icons8-multiply-32.png" />
+    <None Include="images\icons8-services-32.png" />
+    <None Include="images\icons8-video-card-32.png" />
+    <None Include="images\icons8-swimming-pool-32.png" />
+    <None Include="images\icons8-wallet-32.png" />
+    <None Include="images\icons8-menu-32.png" />
+    <None Include="images\icons8-circled-play-32.png" />
     <Content Include="images\zcash-logo-1.png" />
     <Content Include="ProjectNotes\TextFile1.txt" />
     <None Include="Resources\Checkmark.png" />
@@ -619,6 +729,7 @@
     <None Include="Resources\ETC.png" />
     <None Include="Resources\ETC2.png" />
     <None Include="Resources\BitcoinGold-Icon-yelow.png" />
+    <None Include="Resources\click_to_stop.png" />
     <Content Include="Resources\LH2-Stop-icon.png" />
     <None Include="Resources\STOP.png" />
     <None Include="Resources\START.png" />
