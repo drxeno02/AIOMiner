@@ -11,8 +11,6 @@
   "dependencies": {
     "apikey": "^0.1.2",
     "apikeygen": "^0.2.0",
-    "bcrypt": "^3.0.2",
-    "bcrypt-promise": "^2.0.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "config": "^1.30.0",
