@@ -1,0 +1,45 @@
+{
+  "Process": [
+    {
+      "Algo": "ethash",
+      "Info": [
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "nvidia-ethdcrminer64",
+          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum AMD+NVIDIA GPU Miner v15.0\\",
+          "EXECUTABLE": "EthDcrMiner64.exe",
+          "PREFERED": " ",
+          "API": "veo",
+          "ARGS": "-epool _ip:_port -ewal _worker -epsw _pass -allpools 1 -allcoins 1 -wd 1 -di _gputouse"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "amd-ethdcrminer64",
+          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum AMD+NVIDIA GPU Miner v15.0\\",
+          "EXECUTABLE": "EthDcrMiner64.exe",
+          "PREFERED": "1",
+          "API": "veo",
+          "ARGS": "-epool _ip:_port -ewal _worker -epsw _pass -allpools 1 -allcoins 1 -wd 1 -di _gputouse"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "nvidia-phoenix",
+          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_5.1c_Windows\\",
+          "EXECUTABLE": "PhoenixMiner.exe",
+          "PREFERED": "1",
+          "API": "veo",
+          "ARGS": "-pool _ip:_port -wal _worker"
+        },
+        {
+          "GPUx": "AMD",
+          "MINER": "amd-phoenix",
+          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_5.1c_Windows\\",
+          "EXECUTABLE": "PhoenixMiner.exe",
+          "PREFERED": "",
+          "API": "veo",
+          "ARGS": "-pool _ip:_port -wal _worker"
+        }
+      ]
+    }
+  ]
+}
