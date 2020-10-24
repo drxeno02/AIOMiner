@@ -6,7 +6,7 @@
         {
           "GPUx": "NVIDIA",
           "MINER": "nvidia-ethdcrminer64",
-          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum AMD+NVIDIA GPU Miner v15.0\\",
+          "PATH": "~\\Miners\\claymore\\Claymore's Dual Ethereum AMD+NVIDIA GPU Miner v15.0\\",
           "EXECUTABLE": "EthDcrMiner64.exe",
           "PREFERED": " ",
           "API": "veo",
@@ -15,7 +15,7 @@
         {
           "GPUx": "AMD",
           "MINER": "amd-ethdcrminer64",
-          "PATH": "~\\Miners\\NVIDAMD\\ethdcrminer64\\Claymore's Dual Ethereum AMD+NVIDIA GPU Miner v15.0\\",
+          "PATH": "~\\Miners\\claymore\\Claymore's Dual Ethereum AMD+NVIDIA GPU Miner v15.0\\",
           "EXECUTABLE": "EthDcrMiner64.exe",
           "PREFERED": "1",
           "API": "veo",
@@ -24,7 +24,7 @@
         {
           "GPUx": "NVIDIA",
           "MINER": "nvidia-phoenix",
-          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_5.1c_Windows\\",
+          "PATH": "~\\Miners\\phoenix\\PhoenixMiner_5.1c_Windows\\",
           "EXECUTABLE": "PhoenixMiner.exe",
           "PREFERED": "1",
           "API": "veo",
@@ -33,7 +33,7 @@
         {
           "GPUx": "AMD",
           "MINER": "amd-phoenix",
-          "PATH": "~\\Miners\\NVIDAMD\\phoenix\\PhoenixMiner_5.1c_Windows\\",
+          "PATH": "~\\Miners\\phoenix\\PhoenixMiner_5.1c_Windows\\",
           "EXECUTABLE": "PhoenixMiner.exe",
           "PREFERED": "",
           "API": "veo",
