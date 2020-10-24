@@ -1,0 +1,16 @@
+{
+  "miners": [
+    {
+      "NAME": "ethdcrminer64",
+      "WEBLOCATION": "https://github.com/BobbyGR/AIOMiner/raw/master/TOOLS/Claymore's%20Dual%20Ethereum%20AMD%2BNVIDIA%20GPU%20Miner%20v15.0.zip",
+      "PATH": "~\\Miners\\claymore\\Claymore's Dual Ethereum AMD+NVIDIA GPU Miner v15.0\\",
+      "VER": "15.0"
+    },
+    {
+      "NAME": "phoenix",
+      "WEBLOCATION": "https://github.com/BobbyGR/AIOMiner/raw/master/TOOLS/PhoenixMiner_5.1c_Windows.zip",
+      "PATH": "~\\Miners\\phoenix\\PhoenixMiner_5.1c_Windows\\",
+      "VER": "5.1c"
+    },
+  ]
+}
