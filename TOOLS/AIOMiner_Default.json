@@ -1,0 +1,54 @@
+{
+	"Pools": {
+		"Coin": [
+			{
+				"type": "Ethereum",
+				"isdefault": "1",
+				"primary": "",
+				"algo": "Ethash",
+				"pool": "EtherMine - Asia",
+				"ip": "stratum+tcp://asia1.ethermine.org",
+				"port": "4444",
+				"altargument": "",
+				"worker": "",
+				"password": ""
+			},
+			{
+				"type": "Ethereum",
+				"isdefault": "1",
+				"primary": "",
+				"algo": "Ethash",
+				"pool": "EtherMine - Europe",
+				"ip": "stratum+tcp://eu1.ethermine.org",
+				"port": "4444",
+				"altargument": "",
+				"worker": "",
+				"password": ""
+			},
+			{
+				"type": "Ethereum",
+				"isdefault": "1",
+				"primary": "",
+				"algo": "Ethash",
+				"pool": "EtherMine - US - East",
+				"ip": "stratum+tcp://us1.ethermine.org",
+				"port": "4444",
+				"altargument": "",
+				"worker": "",
+				"password": ""
+			},
+			{
+				"type": "Ethereum",
+				"isdefault": "1",
+				"primary": "",
+				"algo": "Ethash",
+				"pool": "2Miners - US - West",
+				"ip": "stratum+tcp://us2.ethermine.org",
+				"port": "4444",
+				"altargument": "",
+				"worker": "",
+				"password": ""
+			}
+		]
+	}
+}
