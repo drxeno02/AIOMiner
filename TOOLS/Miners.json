@@ -8,7 +8,7 @@
     },
     {
       "NAME": "trex",
-      "WEBLOCATION": "https://github.com/BobbyGR/AIOMiner/raw/master/TOOLS/PhoenixMiner_5.1c_Windows.zip",
+      "WEBLOCATION": "https://github.com/BobbyGR/AIOMiner/raw/master/TOOLS/trex.zip",
       "PATH": "~\\Miners\\trex\\",
       "VER": "0.18.5"
     }
