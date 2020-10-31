@@ -23,7 +23,7 @@
         },
         {
           "GPUx": "NVIDIA",
-          "MINER": "trex084",
+          "MINER": "trex",
           "PATH": "~\\Miners\\trex\\",
           "EXECUTABLE": "t-rex.exe",
           "PREFERED": "",
