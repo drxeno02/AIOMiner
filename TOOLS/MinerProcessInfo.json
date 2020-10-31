@@ -23,8 +23,8 @@
         },
         {
           "GPUx": "NVIDIA",
-          "MINER": "trex",
-          "PATH": "~\\Miners\\trex\\",
+          "MINER": "nvidia-trex",
+          "PATH": "~\\Miners\\trex\\PhoenixMiner_5.1c_Windows\\",
           "EXECUTABLE": "t-rex.exe",
           "PREFERED": "",
           "API": "trex",
