@@ -5,6 +5,7 @@
 /.vs/MyMiner/v15/Server/sqlite3
 /.vs/AIO-MAIN/v15
 /.vs
+/MyMiner/bin
 /MyMiner/bin/Debug/Log
 /MyMiner/bin/Debug/Settings/bkup
 /MyMiner/bin/Debug/Settings/Settings.zip

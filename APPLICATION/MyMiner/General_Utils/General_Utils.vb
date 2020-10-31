@@ -1514,9 +1514,6 @@ Public Class General_Utils
                 supported = "https://coinblockers.com/workers/" & PubShared.worker
             End If
 
-            If PubShared.ip.ToUpper.Contains("AIOMINER") Then
-                supported = "https://pool.aiominer.com/?address=" & PubShared.worker
-            End If
 
             If PubShared.ip.ToLower.Contains("btgpool.pro") Then
                 supported = "http://btgpool.pro/workers/" & PubShared.worker

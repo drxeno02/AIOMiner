@@ -40,7 +40,7 @@ Public Class MinerUpdates
 
             Try
 
-                Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/Miners.json")
+                Dim uri As System.Uri = New System.Uri(PubShared.HOSTED_DATA_STORE & "/Miners.json")
                 Dim DMJ As System.Net.WebClient = New System.Net.WebClient()
                 Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\Miners.json")
                 If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
@@ -91,7 +91,7 @@ Public Class MinerUpdates
         US_Status = "Update Completed."
         Try
             Dim appPath As String = Application.StartupPath()
-            Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/MinerProcessInfo.json")
+            Dim uri As System.Uri = New System.Uri(PubShared.HOSTED_DATA_STORE & "/MinerProcessInfo.json")
             Dim DMJ1 As System.Net.WebClient = New System.Net.WebClient()
             Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\MinerProcessInfo.json")
             If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then

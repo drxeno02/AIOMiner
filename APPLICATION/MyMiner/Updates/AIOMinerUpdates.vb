@@ -13,6 +13,6 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Process.Start("https://github.com/BobbyGR/AIOMiner/releases/download/A8.1.0/AIOInstaller.exe")
+        'Process.Start("https://github.com/BobbyGR/AIOMiner/releases/download/A8.1.0/AIOInstaller.exe")
     End Sub
 End Class

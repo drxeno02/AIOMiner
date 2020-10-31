@@ -21,7 +21,9 @@ Public Class Downloader
     Private completed As Boolean = False
 
 
+
     Private Sub Downloader_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
         'Check Windows Defender
         If PubShared.WindowsDefenderPassed <> True Then
@@ -38,44 +40,44 @@ Public Class Downloader
             Timer1.Start()
         Else
             Label3.Text = "Status - Downloading Miners.json.."
-				Dim appPath As String = Application.StartupPath()
-				'Clear the pipes
-				If System.IO.File.Exists(appPath & "\Settings\Updates\Miners.json") Then
-					System.IO.File.Delete(appPath & "\Settings\Updates\Miners.json")
-				End If
+            Dim appPath As String = Application.StartupPath()
+            'Clear the pipes
+            If System.IO.File.Exists(appPath & "\Settings\Updates\Miners.json") Then
+                System.IO.File.Delete(appPath & "\Settings\Updates\Miners.json")
+            End If
 
-				If System.IO.File.Exists(appPath & "\Settings\Backups\Miners.json") Then
-					System.IO.File.Delete(appPath & "\Settings\Backups\Miners.json")
-				End If
+            If System.IO.File.Exists(appPath & "\Settings\Backups\Miners.json") Then
+                System.IO.File.Delete(appPath & "\Settings\Backups\Miners.json")
+            End If
 
-				If System.IO.File.Exists(appPath & "\Settings\Updates\MinerProcessInfo.json") Then
-					System.IO.File.Delete(appPath & "\Settings\Updates\MinerProcessInfo.json")
-				End If
+            If System.IO.File.Exists(appPath & "\Settings\Updates\MinerProcessInfo.json") Then
+                System.IO.File.Delete(appPath & "\Settings\Updates\MinerProcessInfo.json")
+            End If
 
-				If System.IO.File.Exists(appPath & "\Settings\Backups\MinerProcessInfo.json") Then
-					System.IO.File.Delete(appPath & "\Settings\Backups\MinerProcessInfo.json")
-				End If
+            If System.IO.File.Exists(appPath & "\Settings\Backups\MinerProcessInfo.json") Then
+                System.IO.File.Delete(appPath & "\Settings\Backups\MinerProcessInfo.json")
+            End If
 
-				Try
+            Try
 
-					Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/Miners.json")
-					Dim DMJ As System.Net.WebClient = New System.Net.WebClient()
-					Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\Miners.json")
-					If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
-						System.IO.Directory.CreateDirectory(fileInfo.Directory.FullName)
-					End If
+                Dim uri As System.Uri = New System.Uri(PubShared.HOSTED_DATA_STORE + "/Miners.json")
+                Dim DMJ As System.Net.WebClient = New System.Net.WebClient()
+                Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\Miners.json")
+                If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
+                    System.IO.Directory.CreateDirectory(fileInfo.Directory.FullName)
+                End If
 
-					AddHandler DMJ.DownloadProgressChanged, AddressOf DMJ_ProgressChanged
-					AddHandler DMJ.DownloadFileCompleted, AddressOf DMJ_DownloadDataCompleted
+                AddHandler DMJ.DownloadProgressChanged, AddressOf DMJ_ProgressChanged
+                AddHandler DMJ.DownloadFileCompleted, AddressOf DMJ_DownloadDataCompleted
 
-					DMJ.DownloadFileAsync(uri, appPath & "\Settings\Updates\Miners.json")
+                DMJ.DownloadFileAsync(uri, appPath & "\Settings\Updates\Miners.json")
 
-				Catch ex As Exception
-					LogUpdate("Unable to download Miners.json!", eLogLevel.Err)
-					Label3.Text = "Status: Status - Error downloading Miners.json"
+            Catch ex As Exception
+                LogUpdate("Unable to download Miners.json!", eLogLevel.Err)
+                Label3.Text = "Status: Status - Error downloading Miners.json"
 
-				End Try
-			End If
+            End Try
+        End If
 
 
         'If PubShared.monitoring = True Then
@@ -87,18 +89,18 @@ Public Class Downloader
 
         'Update for miners
         If AIOMiner.TextBox1.Text.ToLower.Contains("miners") Then
-			AIOMiner.TextBox1.Visible = False
-			AIOMiner.TextBox2.Visible = False
-		End If
+            AIOMiner.TextBox1.Visible = False
+            AIOMiner.TextBox2.Visible = False
+        End If
 
 
 
 
 
 
-	End Sub
+    End Sub
 
-	Private Sub DMJ_ProgressChanged(ByVal sender As Object, ByVal e As DownloadProgressChangedEventArgs)
+    Private Sub DMJ_ProgressChanged(ByVal sender As Object, ByVal e As DownloadProgressChangedEventArgs)
 
 
 		Dim bytesIn As Double = Double.Parse(e.BytesReceived.ToString())
@@ -147,8 +149,8 @@ Public Class Downloader
 		Label3.Text = "Status: Downloading MinerProcessInfo.json"
 		Try
 
-            Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/MinerProcessInfo.json")
-			Dim DMJ1 As System.Net.WebClient = New System.Net.WebClient()
+            Dim uri As System.Uri = New System.Uri(PubShared.HOSTED_DATA_STORE & "/MinerProcessInfo.json")
+            Dim DMJ1 As System.Net.WebClient = New System.Net.WebClient()
 			Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\MinerProcessInfo.json")
 			If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
 				System.IO.Directory.CreateDirectory(fileInfo.Directory.FullName)
@@ -407,7 +409,7 @@ Public Class Downloader
                 Try
                     SetAllowUnsafeHeaderParsing20()
                     Dim VERResults As String
-                    Dim address As String = pubshared.HOSTED_DATA_STORE & "/aiominer/minersversion.txt"
+                    Dim address As String = "https://raw.githubusercontent.com/BobbyGR/AIOMiner/master/TOOLS/minersversion.txt"
                     Dim client As WebClient = New WebClient()
                     Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
                     VERResults = reader.ReadToEnd

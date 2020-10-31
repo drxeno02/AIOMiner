@@ -53,7 +53,7 @@ Public Class AIOMinerWebAPI
         Dim retVal As Boolean = False
 
         Try
-            Dim request As WebRequest = WebRequest.Create(baseuri & "api/info/" & PubShared.ApiKey)
+            Dim request As WebRequest = WebRequest.Create(baseuri & "/api/info/" & PubShared.ApiKey)
             request.Method = "GET"
             Dim response As WebResponse = request.GetResponse()
             Dim inputstream1 As Stream = response.GetResponseStream()
@@ -64,21 +64,23 @@ Public Class AIOMinerWebAPI
             response.Dispose()
 
 
-            'Check if correct api key was given
-            If responseText.ToLower.Contains("email_verified") = True Then
-                'Correct API, see if it's a subscriber  
-                If responseText.ToLower.Contains("normie") = True Then
-                    'Not a paying user, show ad
-                    retVal = False
-                Else
-                    retVal = True
-                End If
-            Else
-                'No or incorrect API Key, show ad
-                PubShared.ShouldBeUpdatingToApi = False
-                retVal = False
+            '#TODO - 10/30/2020 - Removed this for simplicity 
 
-            End If
+            'Check if correct api key was given
+            'If responseText.ToLower.Contains("email_verified") = True Then
+            '    'Correct API, see if it's a subscriber  
+            '    If responseText.ToLower.Contains("normie") = True Then
+            '        'Not a paying user, show ad
+            '        retVal = False
+            '    Else
+            '        retVal = True
+            '    End If
+            'Else
+            '    'No or incorrect API Key, show ad
+            '    PubShared.ShouldBeUpdatingToApi = False
+            '    retVal = False
+
+            'End If
 
         Catch ex As Exception
             If ex IsNot Nothing AndAlso ex.Message IsNot Nothing AndAlso Not ex.Message.ToLower.Contains("unable to connect") Then
@@ -110,11 +112,14 @@ Public Class AIOMinerWebAPI
 
     Public Shared Function checkApiOnline() As Boolean
         Dim baseuri As String = GetBaseApiUrl()
+
+
+
         Dim responseText As String = ""
         Dim retVal As Boolean = False
 
         Try
-            Dim request As WebRequest = WebRequest.Create(baseuri & "api")
+            Dim request As WebRequest = WebRequest.Create(baseuri & "/api")
             request.Method = "GET"
             Dim response As WebResponse = request.GetResponse()
             Dim inputstream1 As Stream = response.GetResponseStream()
@@ -192,7 +197,7 @@ Public Class AIOMinerWebAPI
 
 
                         If (myJobsApi.Jobs.Length > 0) Then
-                            Dim urlToPost As String = baseuri & myrUpdateInfo.api
+                            Dim urlToPost As String = baseuri & "/" & myrUpdateInfo.api
                             Try
                                 webClient.Headers.Add("Content-Type", "application/json")
                                 Dim jsonstring As Object = JsonConvert.SerializeObject(myJobsApi)
@@ -260,7 +265,10 @@ Public Class AIOMinerWebAPI
 
 
             Try
-                If PubShared.GpuListView.Items.Count > 0 Then
+                ' There is a race condition going on here, not sure why or how any of this ever worked but during debug the below can fail. It's being checked before it exists , quick bug fix is to set if date = date
+                ' If PubShared.GpuListView.Items.Count > 0 Then
+                If Today = Today Then
+
                     'Check that API is online
                     Try
                         Try
@@ -323,7 +331,7 @@ Public Class AIOMinerWebAPI
 
 
                                 If (myRigsApi.Rigs.Length > 0 AndAlso myRigsApi.Rigs(0).GPUs.Length > 0) Then
-                                    Dim urlToPost As String = baseuri & "api/rigs/update"
+                                    Dim urlToPost As String = baseuri & "/api/rigs/update"
                                     Try
                                         webClient.Headers.Add("Content-Type", "application/json")
                                         Dim jsonstring As Object = JsonConvert.SerializeObject(myRigsApi)
@@ -365,14 +373,20 @@ Public Class AIOMinerWebAPI
         Dim baseuri As String = GetBaseApiUrl()
         Dim webClient As New WebClient()
 
+        'Force this, eventual purge out the subscription portion
+        'PubShared.ShouldBeUpdatingToApi = True
+
         If PubShared.ShouldBeUpdatingToApi Then
             Try
-                If PubShared.GpuListView.Items.Count > 0 Then
+                'Bug condition during debug, #TODO
+                'If PubShared.GpuListView.Items.Count > 0 Then
+                If Today = Today Then
+
                     'Check that API is online
                     Try
                         Try
                             If checkApiOnline() Then
-                                Dim grequest As WebRequest = WebRequest.Create(baseuri & "api/rigs/getwork")
+                                Dim grequest As WebRequest = WebRequest.Create(baseuri & "/api/rigs/getwork")
                                 grequest.Method = "GET"
                                 grequest.Headers.Add("RigInfo", buildRigInfoForApi(hostname))
                                 Dim gresponse As WebResponse = grequest.GetResponse()
@@ -380,24 +394,25 @@ Public Class AIOMinerWebAPI
                                 Dim jobjRigswork = Linq.JObject.Parse(gresponseString)
                                 Dim myRigsWork = jobjRigswork.ToObject(Of RigsWork)
 
-								'Check if Rigs Works contains multiple items (Add Pool for instance has multiple items)
-								'Change minning
-								'CHANGE_MINING $COINNAME$
+                                'Check if Rigs Works contains multiple items (Add Pool for instance has multiple items)
+                                'Change minning
+                                'CHANGE_MINING $COINNAME$
 
 
-								Dim arigJob As RigJob = DoWorkForApiRequest.DecodeApiWork(myRigsWork, hostname)
+                                Dim arigJob As RigJob = DoWorkForApiRequest.DecodeApiWork(myRigsWork, hostname)
 
-								Return arigJob
+                                Return arigJob
 
                             End If
                         Catch ex As Exception
-
+                            Dim methodName$ = System.Reflection.MethodBase.GetCurrentMethod().Name
+                            LogUpdate(methodName$ & ":" & ex.Message, eLogLevel.Err)
                             If ex.Message.ToLower.Contains("actively refused") Then
                                 'LogUpdate("Web API service endpoint for rigs get work appears down ")
                             End If
                         End Try
                     Catch ex As Exception
-
+                        LogUpdate(ex.Message)
                     End Try
                 End If
             Catch ex As Exception

@@ -1,22 +1,23 @@
 ﻿Imports Newtonsoft.Json
+Imports AIOminer.General_Utils
 
 Public Class PubShared
 
     'Website/API
     'Change to your own items later
-    Public Shared API_LOCATION As String = ""
-    Public Shared WEB_VERSION As String = ""
-    Public Shared WEB_MINER_VERSION As String = ""
-    Public Shared WEB_DISCORD_LINK As String = ""
-    Public Shared WEB_DEFAULT_COINS_POOLS_JSON As String = ""
-    Public Shared WEB_GITHUB_LINK As String = ""
-    Public Shared WEB_WIKI_LINK_UPDATES As String = ""
-    Public Shared WEB_WIKI_LINK_MINER_UPDATES As String = ""
-    Public Shared WEB_REDDIT_LINK As String = ""
+    Public Shared API_LOCATION As String = ReturnAIOsetting("apilocation")
+    Public Shared WEB_VERSION As String = ReturnAIOsetting("web_version")
+    Public Shared WEB_MINER_VERSION As String = ReturnAIOsetting("web_miner_version")
+    Public Shared WEB_DISCORD_LINK As String = ReturnAIOsetting("web_discord_link")
+    Public Shared WEB_DEFAULT_COINS_POOLS_JSON As String = ReturnAIOsetting("web_default_coins_pools_json")
+    Public Shared WEB_GITHUB_LINK As String = ReturnAIOsetting("web_github_link")
+    Public Shared WEB_WIKI_LINK_UPDATES As String = ReturnAIOsetting("web_wiki_link_updates")
+    Public Shared WEB_WIKI_LINK_MINER_UPDATES As String = ReturnAIOsetting("web_wiki_link_miner_updates")
+    Public Shared WEB_REDDIT_LINK As String = ReturnAIOsetting("web_reddit_link")
 
     'Your Hosted Items
-    Public Shared HOSTED_DATA_STORE As String = "" 'example https://aiominer.com/files  do not include the / at the end, but this is where your files are stored for images etc
-    Public Shared HOSTED_WEBSITE As String = "" ' example https://aiominer.com
+    Public Shared HOSTED_DATA_STORE As String = ReturnAIOsetting("hosted_data_store") 'example https://aiominer.com/files  do not include the / at the end, but this is where your files are stored for images etc
+    Public Shared HOSTED_WEBSITE As String = ReturnAIOsetting("hosted_website") ' example https://aiominer.com
 
 
 
@@ -33,7 +34,7 @@ Public Class PubShared
     Public Shared powercosts As String = "0"
     Public Shared newcoinname As String = ""
     Public Shared AdvertiseShowing As Boolean = False
-    Public Shared Subscriber As Boolean = False
+    Public Shared Subscriber As Boolean = True
     Public Shared uptime As String = ""
     Public Shared DTime_Started As DateTime
 

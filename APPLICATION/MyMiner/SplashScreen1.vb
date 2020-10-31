@@ -10,6 +10,7 @@ Imports System.Drawing.Drawing2D
 
 
 Public NotInheritable Class SplashScreen1
+    Private SKIP_CHECK As Boolean = False
 
     Private CHECKING_API As Boolean = False
     'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
@@ -40,6 +41,8 @@ Public NotInheritable Class SplashScreen1
         'Check the status of settings.json
         Dim appPath As String = Application.StartupPath()
 
+        'This was to solve the corrupt file issue, problem then happens if you manually make changes to this file.  Need a better way or make a setting editor.
+
         Try
             If System.IO.File.Exists(appPath & "\Settings\Backups\AIOSettings.json") Then
                 'Purge old file
@@ -51,7 +54,7 @@ Public NotInheritable Class SplashScreen1
 
         End Try
 
-        PubShared.Version = "07.11.2020"
+        PubShared.Version = "10.30.20"
         PubShared.aioLoading = True
         Ver.Text = PubShared.Version
 
@@ -99,61 +102,9 @@ Public NotInheritable Class SplashScreen1
             Dim appPath As String = Application.StartupPath()
             If System.IO.File.Exists(appPath & "\Settings\MinerProcessInfo.json") Then
                 Label1.Text = "Found your MinerProcessInfo file, looking good!"
-                '####################ADD NEW SETTINGS HERE#######################
-                Try
-                    '8.2.1 - Added Miner Versions
-                    If AddNewSettings("minerversion", "0.0.0.1") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                    '8.2.1 - Adding donation setting
-                    If AddNewSettings("donation", "No Thanks") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                    '8.2.2 - Adding restartrig
-                    If AddNewSettings("restartrig", "False") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                    If AddNewSettings("restartrigtime", "999999") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                    '8.2.2 - Adding restart mining
-                    If AddNewSettings("restartmining", "False") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                    If AddNewSettings("restartminingtime", "999999") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                '8.4.0
-                If AddNewSettings("baseapiurl", PubShared.API_LOCATION) = "added" Then
-                    Label1.Text = "Checking under the bed for monsters!"
-                End If
-                If AddNewSettings("apikey", "") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                    If AddNewSettings("rigname", "") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                    If AddNewSettings("apienabled", "False") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-                    If AddNewSettings("dontaskwebsite", "False") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
+            '####################ADD NEW SETTINGS HERE#######################
 
-                    '8.6.0
-                    If AddNewSettings("powercosts", "0.10") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-
-                    If AddNewSettings("systemsettings", "") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-
-                    If AddNewSettings("WhatToMineUpdate", "1400") = "added" Then
-                        Label1.Text = "Checking under the bed for monsters!"
-                    End If
-
-                    Try
+            Try
                         Dim x As String = appPath
                         Dim y As String = "powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath " & x
                         'Windows Defender Whitelist Test
@@ -162,16 +113,14 @@ Public NotInheritable Class SplashScreen1
 
                     End Try
 
-                Catch ex As Exception
-                    LogUpdate("Fatal Error adding New settings, possible corrupt settings file", eLogLevel.Err)
-                End Try
-                '#################### END NEW SETTINGS HERE #######################
+            ' To update current users with just a new setting, use the aiominer.general AddSetting.  I hate this .json file, I really do.  In 9, it's in a sql server
+            '#################### END NEW SETTINGS HERE #######################
 
 
 
 
 
-                Timer2.Start()
+            Timer2.Start()
                 Timer1.Stop()
             Else
                 Timer1.Stop()
@@ -342,18 +291,22 @@ Public NotInheritable Class SplashScreen1
         Else
             CHECKING_API = True
             Try
-
+                'TODO
                 If ReturnAIOsetting("apienabled") = "True" Then
                     Label1.Text = "API Enabled, Waiting for network stack..."
                     Dim ping As New System.Net.NetworkInformation.Ping
-                    For i = 2 To 100
+                    For i = 1 To 5
 
                         Try
                             Label1.Refresh()
+                            If SKIP_CHECK Then
+                                Exit For
+                            End If
                             i = i - 1
 
-                            Label1.Text = "API Enabled, Checking Network " & (i).ToString & "/100"
+                            Label1.Text = "Unable to reach API, Retrying " & (i).ToString & "/5"
                             Dim request As WebRequest = WebRequest.Create(PubShared.API_LOCATION)
+
                             request.Timeout = 5000
                             request.Method = "GET"
                             Dim response As WebResponse = request.GetResponse()
@@ -364,6 +317,7 @@ Public NotInheritable Class SplashScreen1
                             reader.Close()
                             If workspace.Contains("OK!") Then
                                 Label1.Text = "AIOMiner API is online!"
+                                Label1.Refresh()
                                 Exit For
                             Else
                                 'Fuck you Sr. <3 u
@@ -371,7 +325,8 @@ Public NotInheritable Class SplashScreen1
                             End If
                         Catch ex As Exception
                             ' Application.DoEvents()
-                            Threading.Thread.Sleep(3000)
+
+                            'Threading.Thread.Sleep(1000)
 
                         End Try
                         i += 1
@@ -383,11 +338,16 @@ Public NotInheritable Class SplashScreen1
 
 
                 Try
-
+                    If Not Label1.Text = "AIOMiner API is online!" Then
+                        ' Failed to reach the site, disabling the API
+                        PubShared.ShouldBeUpdatingToApi = False
+                    End If
 
                     Dim i As Integer = 0
 
                     Label1.Text = "Loading..."
+                    Label1.Refresh()
+
                     'Get list of video cards
                     Dim GraphicsCardName As String
                     'Dim i As Int64
@@ -452,6 +412,11 @@ Public NotInheritable Class SplashScreen1
     End Sub
 
     Private Sub DetailsLayoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles DetailsLayoutPanel.Paint
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
+        SKIP_CHECK = True
 
     End Sub
 End Class

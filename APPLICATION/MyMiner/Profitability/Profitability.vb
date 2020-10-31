@@ -371,9 +371,14 @@ Public Class Profitability
             Next
         Next
 
-        'Shane requested this
-        OtherCombo.Text = OtherCombo.Items(0)
+        Try
 
+
+            'Shane requested this
+            OtherCombo.Text = OtherCombo.Items(0)
+        Catch ex As Exception
+
+        End Try
         Loaded = True
 
         PubShared.DoingProfitability = True
@@ -477,11 +482,11 @@ Public Class Profitability
         'Disable the benchmark tool
         'Show a new form 
         PubShared.algo = "ethash"
-        PubShared.coin = "etc"
-        PubShared.ip = "us1-etc.ethermine.org"
+        PubShared.coin = "eth"
+        PubShared.ip = "us1.ethermine.org"
         PubShared.port = "4444"
-        PubShared.worker = "0xa78aA3287f9c80698Fe6412aDD39aCB41603084e"
-        PubShared.pool = "etc.ethermine.org"
+        PubShared.worker = "0x07bC4d2a376b770b69156f6f1616dbc033a94395"
+        PubShared.pool = "us1.ethermine.org"
         PubShared.password = "x"
 
 

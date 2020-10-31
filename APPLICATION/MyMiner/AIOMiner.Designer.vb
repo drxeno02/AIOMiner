@@ -544,7 +544,7 @@ Partial Class AIOMiner
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(362, 37)
+        Me.Button1.Location = New System.Drawing.Point(368, 37)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(322, 139)
         Me.Button1.TabIndex = 4

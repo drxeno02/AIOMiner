@@ -43,7 +43,7 @@ Public Class UpdateSettings
 
             Try
 
-                Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/Miners.json")
+                Dim uri As System.Uri = New System.Uri(PubShared.HOSTED_DATA_STORE & "/Miners.json")
                 Dim DMJ As System.Net.WebClient = New System.Net.WebClient()
                 Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\Miners.json")
                 If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
@@ -91,7 +91,7 @@ Public Class UpdateSettings
         US_Status = "Downloading MinerProcessInfo.json"
         Try
             Dim appPath As String = Application.StartupPath()
-            Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/MinerProcessInfo.json")
+            Dim uri As System.Uri = New System.Uri(PubShared.HOSTED_DATA_STORE & "/MinerProcessInfo.json")
             Dim DMJ1 As System.Net.WebClient = New System.Net.WebClient()
             Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\MinerProcessInfo.json")
             If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
@@ -190,7 +190,7 @@ Public Class UpdateSettings
                 System.IO.File.Delete(appPath & "\Settings\Updates\AIOMiner_Default.json")
             End If
 
-            Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/AIOMiner_Default.json")
+            Dim uri As System.Uri = New System.Uri(PubShared.HOSTED_DATA_STORE & "/AIOMiner_Default.json")
             Dim AIOMD As System.Net.WebClient = New System.Net.WebClient()
             Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\AIOMiner_Default.json")
             If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
@@ -275,7 +275,7 @@ Public Class UpdateSettings
                         System.IO.File.Delete(appPath & "\Settings\Updates\AIOMinerUpdater.exe")
                     End If
 
-                    Dim uri As System.Uri = New System.Uri(pubshared.HOSTED_DATA_STORE & "/aiominer/AIOMinerUpdater.exe")
+                    Dim uri As System.Uri = New System.Uri(PubShared.HOSTED_DATA_STORE & "/AIOMinerUpdater.exe")
                     Dim AIOUD As System.Net.WebClient = New System.Net.WebClient()
                     Dim fileInfo As System.IO.FileInfo = New System.IO.FileInfo(appPath & "\Settings\Updates\AIOMinerUpdater.exe")
                     If Not System.IO.Directory.Exists(fileInfo.Directory.FullName) Then
@@ -289,7 +289,7 @@ Public Class UpdateSettings
 
                 Catch ex As Exception
                     LogUpdate(ex.Message, eLogLevel.Err)
-                    Label3.Text = "Error downloading AIOminer_Default.json"
+                    Label3.Text = "Error downloading AIOMinerUpdater.exe"
                 End Try
             End If
         Catch ex As Exception

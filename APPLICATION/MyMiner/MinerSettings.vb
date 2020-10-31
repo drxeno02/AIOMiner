@@ -211,7 +211,7 @@ Public Class MinerSettings
                 zipper.WaitForExit()
                 Refresh_Stats()
             Catch ex As Exception
-                MsgBox("Unable to Start/Find AIO-DisableWindowsUpdates.exe, Please contact support@aiominer.com")
+                MsgBox("Unable to Start/Find AIO-DisableWindowsUpdates.exe")
             End Try
         Else
 
@@ -243,7 +243,7 @@ Public Class MinerSettings
                 '   Process.Start(appPath + "\AIO-WindowsDefenderExclusion.exe")
 
             Catch ex As Exception
-                MsgBox("Unable to Start/Find AIO-WindowsDefenderExclusion.exe, Please contact support@aiominer.com")
+                MsgBox("Unable to Start/Find AIO-WindowsDefenderExclusion.exe")
             End Try
         Else
 

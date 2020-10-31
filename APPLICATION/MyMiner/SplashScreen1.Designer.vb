@@ -109,6 +109,7 @@ Partial Class SplashScreen1
         Me.DetailsLayoutPanel.Controls.Add(Me.Label1, 0, 0)
         Me.DetailsLayoutPanel.Location = New System.Drawing.Point(192, 221)
         Me.DetailsLayoutPanel.Name = "DetailsLayoutPanel"
+        Me.DetailsLayoutPanel.RowCount = 2
         Me.DetailsLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.0!))
         Me.DetailsLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.0!))
         Me.DetailsLayoutPanel.Size = New System.Drawing.Size(301, 79)
@@ -121,7 +122,7 @@ Partial Class SplashScreen1
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 29)
+        Me.Label1.Location = New System.Drawing.Point(3, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(295, 20)
         Me.Label1.TabIndex = 1

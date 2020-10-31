@@ -26,7 +26,7 @@ Public Class Advertising
 
         Try
             Dim MyWebClient As New System.Net.WebClient
-            Dim ImageInBytes() As Byte = MyWebClient.DownloadData(PubShared.HOSTED_DATA_STORE & "/aiominer/release/advertiseaio.png")
+            Dim ImageInBytes() As Byte = MyWebClient.DownloadData(PubShared.HOSTED_DATA_STORE & "/advertiseaio.png")
             Dim ImageStream As New IO.MemoryStream(ImageInBytes)
             PictureBox1.Image = New System.Drawing.Bitmap(ImageStream)
             Timer1.Interval = 5000

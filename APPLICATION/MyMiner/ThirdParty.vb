@@ -93,7 +93,7 @@ Public Class ThirdParty
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Dim LNK As String = "http://wiki.aiominer.com/index.php/OhGodAnETHlargementPill"
+        Dim LNK As String = PubShared.WEB_WIKI_LINK_UPDATES
         Process.Start(LNK)
     End Sub
 

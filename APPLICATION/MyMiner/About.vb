@@ -29,9 +29,8 @@ Public Class About
         VERSION.Text = PubShared.Version
         miners.Text = ReturnAIOsetting("minerversion")
         RichTextBox1.Text =
-           "AIOMiner is brought to you by Modern Mining LLC.
-Special Thank you to all of our Alpha Testers!
-All of the software that you are downloading ""CCMINER"", ""CLAYMORE"", etc, etc are brought to you by those developers, any fees they may have implied have not been tampered with. If you are one of those developers and wish that your software is no longer used in AIOMiner please e-mail us at brob@aiominer.com & shane@aiominer.com"
+           "AIOMiner is brought to you by users like yourself!  If you can help code, please consider helping!
+All of the software that you are downloading ""CCMINER"", ""Phoenix"", etc, etc are brought to you by those developers, any fees they may have implied have not been tampered with. If you are one of those developers and wish that your software is no longer use it, please visit our github repo and open up an issue"
 
         RichTextBox1.Text = RichTextBox1.Text & "Konami"
         ' This call is required by the designer.

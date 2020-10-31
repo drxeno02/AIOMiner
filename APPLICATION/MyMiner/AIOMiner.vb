@@ -72,7 +72,7 @@ Public Class AIOMiner
             Next
         Catch ex As Exception
             LogUpdate(ex.Message)
-            LogUpdate("Systems Check: Unable to verify Windows Service, please contact support@aiominer.com")
+            LogUpdate("Systems Check: Unable to verify Windows Service")
             PubShared.WindowsUpdatePassed = True
         End Try
 
@@ -95,7 +95,7 @@ Public Class AIOMiner
             End If
         Catch ex As Exception
             LogUpdate(ex.Message)
-            LogUpdate("Systems Check: Unable to verify Windows Defender whitelist, please contact support@aiominer.com")
+            LogUpdate("Systems Check: Unable to verify Windows Defender whitelist")
             PubShared.WindowsUpdatePassed = True
         End Try
 
@@ -116,17 +116,17 @@ Public Class AIOMiner
                         PubShared.HardDriveCheckPassed = True
                     End If
                 Catch ex As Exception
-                    LogUpdate("Systems Check: Unable to review disk space, please contact support@aiominer.com")
+                    LogUpdate("Systems Check: Unable to review disk space")
                     PubShared.HardDriveCheckPassed = True
                 End Try
             Else
-                LogUpdate("Systems Check: Unable to review disk space, please contact support@aiominer.com")
+                LogUpdate("Systems Check: Unable to review disk space")
                 PubShared.HardDriveCheckPassed = True
             End If
 
         Catch ex As Exception
             LogUpdate(ex.Message)
-            LogUpdate("Systems Check: Unable to review disk space, please contact support@aiominer.com")
+            LogUpdate("Systems Check: Unable to review disk space")
             PubShared.HardDriveCheckPassed = True
         End Try
 
@@ -164,7 +164,7 @@ Public Class AIOMiner
             End If
         Catch ex As Exception
             LogUpdate(ex.Message)
-            LogUpdate("Systems Check: Unable to review Virtual Memory, please contact support@aiominer.com")
+            LogUpdate("Systems Check: Unable to review Virtual Memory")
             PubShared.VirtualMemoryPassed = True
         End Try
 
@@ -285,8 +285,8 @@ Public Class AIOMiner
                         'not a subscriber, show advertising
                         ' PubShared.AdvertiseShowing = True
 
+                        'Advertising.Show()
 
-                        Advertising.Show()
                         While PubShared.AdvertiseShowing = True
                             Application.DoEvents()
                             Threading.Thread.Sleep(100)
@@ -458,7 +458,7 @@ Public Class AIOMiner
 
         'See if they have both AMD and NVIDIA
         If PubShared.amd = True AndAlso PubShared.nvidia = "True" Then
-            LogUpdate("TEAM RED/GREEN.  GOOD LUCK SIR!")
+            LogUpdate("TEAM RED/GREEN.  GOOD LUCK!")
         End If
 
         'Load up coin list
@@ -755,6 +755,8 @@ Public Class AIOMiner
                         Catch ex As Exception
 
                         End Try
+
+
                         If PubShared.ackupdates = False Then
 
                             'Check if Version is Good
@@ -792,7 +794,8 @@ Public Class AIOMiner
                                 If VERResults = "" Then
                                     LogUpdate("Unable to check for miner version updates, check network", eLogLevel.Err)
                                 Else
-                                    If ReturnAIOsetting("minerversion") = VERResults Then
+                                    Dim minerver As String = ReturnAIOsetting("minerversion")
+                                    If minerver.Trim() = VERResults.Trim() Then
                                     Else
                                         worker.ReportProgress(49)
                                     End If
@@ -1981,6 +1984,7 @@ Public Class AIOMiner
                             For i = 0 To TrueCardCount
                                 Try
                                     CardPower = GPU_POWERDRAW(i)
+
                                 Catch ex As Exception
                                     CardPower = "0"
                                 End Try
@@ -2021,6 +2025,7 @@ Public Class AIOMiner
                         Label3.Text = "Current GPU Power Draw: " & AMDPOWER.ToString & " Watts*"
                     End If
 
+                    '10-29-20  - BR - What the hell, stop checking this every time, even if you are not mining.  
                     Try
                         ' We need to speed up this process, stop checking every time, you already know the answer
 
@@ -2123,6 +2128,8 @@ Public Class AIOMiner
                         Select Case hardware.HardwareType
 
                             Case HardwareType.GpuNvidia
+
+
                                 GPUNAME = hardware.Name
                                 Dim NewNvidia As Boolean = False
                                 If GPUNAME.ToLower.Contains("16") Then
@@ -2154,7 +2161,10 @@ Public Class AIOMiner
                                     '    NewNvidia = True
                                     '    GPUFAN = GPU_FANSPEED(GPUID)
                                     'End If
+                                    If sensor.SensorType = SensorType.Fan Then
+                                        GPUFAN = sensor.Value.ToString
 
+                                    End If
                                     If sensor.Name.ToLower.Contains("fan") Then
                                         If NewNvidia = False Then
                                             GPUFAN = sensor.Value.ToString
@@ -2389,17 +2399,17 @@ Public Class AIOMiner
                 Dim CoinName As String = ComboBox1.Text
                 If CoinName = "Donate" Then
                     If PubShared.amd = True Then
-                        PubShared.worker = "0xa78aA3287f9c80698Fe6412aDD39aCB41603084e"
-                        PubShared.ip = "us1-etc.ethermine.org"
+                        PubShared.worker = "0x07bC4d2a376b770b69156f6f1616dbc033a94395"
+                        PubShared.ip = "us1.ethermine.org"
                         PubShared.algo = "Ethash"
                         PubShared.pool = "Ethash"
                         PubShared.password = ""
                         PubShared.coin = "Donate"
                         PubShared.port = "14444"
                     Else
-                        PubShared.ip = "us1-etc.ethermine.org"
+                        PubShared.ip = "us1.ethermine.org"
                         PubShared.port = "14444"
-                        PubShared.worker = "0xa78aA3287f9c80698Fe6412aDD39aCB41603084e"
+                        PubShared.worker = "0x07bC4d2a376b770b69156f6f1616dbc033a94395"
                         PubShared.algo = "Ethash"
                         PubShared.pool = "Ethash"
                         PubShared.password = ""
@@ -2699,17 +2709,17 @@ Public Class AIOMiner
                     Dim CoinName As String = ComboBox1.Text
                     If CoinName = "Donate" Then
                         If PubShared.amd = True Then
-                            PubShared.worker = "0xa78aA3287f9c80698Fe6412aDD39aCB41603084e"
-                            PubShared.ip = "us1-etc.ethermine.org"
+                            PubShared.worker = "0x07bC4d2a376b770b69156f6f1616dbc033a94395"
+                            PubShared.ip = "us1.ethermine.org"
                             PubShared.algo = "Ethash"
                             PubShared.pool = "Ethash"
                             PubShared.password = ""
                             PubShared.coin = "Donate"
                             PubShared.port = "14444"
                         Else
-                            PubShared.ip = "us1-etc.ethermine.org"
+                            PubShared.ip = "us1.ethermine.org"
                             PubShared.port = "14444"
-                            PubShared.worker = "0xa78aA3287f9c80698Fe6412aDD39aCB41603084e"
+                            PubShared.worker = "0x07bC4d2a376b770b69156f6f1616dbc033a94395"
                             PubShared.algo = "Ethash"
                             PubShared.pool = "Ethash"
                             PubShared.password = ""
@@ -3481,9 +3491,7 @@ Public Class AIOMiner
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
-    End Sub
 
     Private Sub TextBox1_Click(sender As Object, e As EventArgs) Handles TextBox1.Click
         If TextBox1.Text = "An update for AIOMiner is available!  Click Here!" Then

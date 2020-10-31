@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AIOminer.exe" size="3003904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AIOminer.exe" size="3002368">
       <assemblyIdentity name="AIOminer" version="0.0.0.6" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a8CANXM/p5fxTdPwqBo5LxKafvoTOeqD6u4/TkkY3ws=</dsig:DigestValue>
+        <dsig:DigestValue>iro61qC3rTha7ArfIk5w8p5Lc5x+FlJMxOEON/U99Co=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
