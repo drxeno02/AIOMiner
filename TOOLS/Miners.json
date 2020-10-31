@@ -5,6 +5,12 @@
       "WEBLOCATION": "https://github.com/BobbyGR/AIOMiner/raw/master/TOOLS/PhoenixMiner_5.1c_Windows.zip",
       "PATH": "~\\Miners\\phoenix\\",
       "VER": "5.1c"
+    },
+    {
+      "NAME": "t-rex",
+      "WEBLOCATION": "https://github.com/trexminer/T-Rex/releases/download/0.18.5/t-rex-0.18.5-linux-cuda11.1.tar.gz",
+      "PATH": "~\\Miners\\trex\\",
+      "VER": "0.18.5"
     }
   ]
 }
