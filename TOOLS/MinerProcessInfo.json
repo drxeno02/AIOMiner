@@ -17,9 +17,18 @@
           "MINER": "amd-phoenix",
           "PATH": "~\\Miners\\phoenix\\PhoenixMiner_5.1c_Windows\\",
           "EXECUTABLE": "PhoenixMiner.exe",
-          "PREFERED": "",
+          "PREFERED": "1",
           "API": "phoenix",
           "ARGS": "-pool _ip:_port -wal _worker"
+        },
+        {
+          "GPUx": "NVIDIA",
+          "MINER": "trex084",
+          "PATH": "~\\Miners\\trex\\",
+          "EXECUTABLE": "t-rex.exe",
+          "PREFERED": "",
+          "API": "trex",
+          "ARGS": "-o _ip:_port -u _worker -p _pass -a ethash --api-bind-http 127.0.0.1:4068"
         }
       ]
     }
